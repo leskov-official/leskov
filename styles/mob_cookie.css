@@ -1,0 +1,68 @@
+#cookie-consent-bar {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #242424;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+    z-index: 9999;
+    box-shadow: 0 0 20px 5px #ffddc585;
+          animation: glowPulse 2.5s infinite ease-in-out;
+         }
+
+          @keyframes glowPulse {
+           0% {
+           box-shadow: 0 0 10px 3px #ffddc550;
+         }
+           50% {
+           box-shadow: 0 0 20px 6px #ffddc5aa;
+         }
+           100% {
+           box-shadow: 0 0 10px 3px #ffddc550;
+           }
+         }
+
+#cookie-consent-bar p {
+    margin: 0;
+    padding: 10px;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+#cookie-consent-bar button {
+    background-color: #c7c7c7;
+    color: #242424;
+    border: none;
+    padding: 8px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#cookie-consent-bar button:hover {
+    background-color: #fff;
+}
+
+@media (max-width: 480px) {
+    #cookie-consent-bar {
+        padding: 10px 10px; 
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    #cookie-consent-bar p {
+        font-size: 18px; 
+    }
+
+    #cookie-consent-bar button {
+        padding: 6px 15px; 
+        font-size: 12px; 
+    }
+}
+
+#cookie-consent-bar button:hover {
+  background-color: #00336a; 
+  color: #ffffff;         
+}
