@@ -6,7 +6,6 @@ document.querySelectorAll('.color-options').forEach(optionGroup => {
   const primaryImg = imageContainer.querySelector('.img-primary');
   const hoverImg = imageContainer.querySelector('.img-hover');
 
-  // Попытка восстановить сохранённый выбор из localStorage
   const saved = localStorage.getItem('product-' + productId);
   if (saved) {
     try {
@@ -27,7 +26,6 @@ document.querySelectorAll('.color-options').forEach(optionGroup => {
     }
   }
 
-  // Обработка клика по точке цвета
   optionGroup.querySelectorAll('.color-dot').forEach(dot => {
     dot.addEventListener('click', () => {
       optionGroup.querySelectorAll('.color-dot').forEach(d => d.classList.remove('selected'));
@@ -37,12 +35,10 @@ document.querySelectorAll('.color-options').forEach(optionGroup => {
       const imgFront = dot.getAttribute('data-img-front');
       const imgBack = dot.getAttribute('data-img-back');
 
-      // Обновление кнопки и изображений
       buyButton.setAttribute('href', url);
       if (primaryImg) primaryImg.setAttribute('src', imgFront);
       if (hoverImg) hoverImg.setAttribute('src', imgBack);
 
-      // Сохранение выбранного состояния
       const state = { url, imgFront, imgBack };
       localStorage.setItem('product-' + productId, JSON.stringify(state));
     });
