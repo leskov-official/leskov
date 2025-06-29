@@ -94,6 +94,13 @@
     outline: none !important;
 }
 
+.play-icon, .pause-icon {
+    max-width: 100%;
+    max-height: 100%;
+    border: none !important;
+    outline: none !important;
+}
+
 .music-info {
     text-align: center;
 }
