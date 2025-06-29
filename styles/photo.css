@@ -76,3 +76,28 @@
     margin-top: 5%;
 }
 
+.card__caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 0.6rem;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    font-size: 0.9rem;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    pointer-events: none;
+}
+
+.card:hover .card__caption {
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+
+.card:not(:hover) .card__caption {
+    opacity: 0;
+    transition: none;
+}
+
