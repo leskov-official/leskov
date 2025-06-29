@@ -52,7 +52,9 @@
 
 .container .card:nth-child(2),
 .container .card:nth-child(5),
-.container .card:nth-child(9) {
+.container .card:nth-child(9),
+.container .card:nth-child(13),
+.container .card:nth-child(17) {
     margin-top: 0;
 }
 
@@ -60,11 +62,17 @@
 .container .card:nth-child(4),
 .container .card:nth-child(6),
 .container .card:nth-child(8),
-.container .card:nth-child(10) {
+.container .card:nth-child(10),
+.container .card:nth-child(12),
+.container .card:nth-child(14),
+.container .card:nth-child(16) {
     margin-top: 2.5%;
 }
 
 .container .card:nth-child(3),
-.container .card:nth-child(7) {
+.container .card:nth-child(7),
+.container .card:nth-child(11),
+.container .card:nth-child(15) {
     margin-top: 5%;
 }
+
