@@ -1,0 +1,70 @@
+.container {
+    display: flex;
+    flex: 1;
+    max-width: 1440px;
+    padding: 0 3rem;
+    margin: 0 auto;
+    overflow: auto;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    flex: 1 1 1%;
+    position: relative;
+    opacity: 0.2;
+    transition: flex 600ms cubic-bezier(0.25, 1, 0.5, 1), opacity 250ms ease;
+    margin: 0.25rem;
+}
+
+.card:hover {
+    flex-basis: 30%;
+    opacity: 1;
+}
+
+.card__inner {
+    background: #fff;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.card__inner picture {
+    width: 100%;
+    height: 0;
+    padding-bottom: 600px;
+    overflow: hidden;
+    position: relative;
+}
+
+.card__inner picture img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.container .card:nth-child(2),
+.container .card:nth-child(5),
+.container .card:nth-child(9) {
+    margin-top: 0;
+}
+
+.container .card:nth-child(2),
+.container .card:nth-child(4),
+.container .card:nth-child(6),
+.container .card:nth-child(8),
+.container .card:nth-child(10) {
+    margin-top: 2.5%;
+}
+
+.container .card:nth-child(3),
+.container .card:nth-child(7) {
+    margin-top: 5%;
+}
