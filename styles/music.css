@@ -71,7 +71,18 @@
     border-radius: 10px;
     box-sizing: border-box;
     border: 5px solid #ffd700; 
-}
+        }
+
+     .music-cover-2:hover {           
+		  opacity: 0.9;        
+	  }
+
+      .music-cover-2 {           
+		  position: relative;           
+		  width: 250px; 		   
+		  overflow: hidden;         
+		  transition: transform 0.3s ease;   
+	  }
 
         .play-button {
     position: absolute;
