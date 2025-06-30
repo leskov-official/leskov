@@ -288,267 +288,112 @@
 
    <section id="music" class="section">
   <h2><i class="fa fa-music" style="width:24px; height:24px;"></i> Музыка</h2>
-  <div class="music-container">
-    <div class="music-item">
-      <div class="music-cover-1" style="position: relative; display: inline-block;">
-        <img src="images/Просто рядом.webp" alt="Igor Leskov - Просто рядом" width="300" height="300" loading="eager">
-<a href="audio/Igor Leskov - Просто рядом.mp3" download class="download-button"
-           style="position: absolute; bottom: 10px; right: 10px; background-color: rgba(0,0,0,0.7); color: white; padding: 6px 12px; border-radius: 4px; text-decoration: none; font-size: 14px;">
-          ⬇
-        </a>
-<audio src="audio/Просто рядом.mp3" preload="metadata"></audio>
-        <input type="range" class="seek-bar" value="0" min="0" step="0.1" aria-label="Ползунок для перемотки аудиозаписи">
-        <button class="play-button" data-src="audio/Просто рядом.mp3">&#9658;</button>
-      </div>
-      <div class="music-info">
-        <label>Просто рядом</label>
-        <div class="window">
-          <p>ПОСЛЕДНИЙ РЕЛИЗ</p>
+  <div class="album-cover">
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img
+              src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/d3ca28bf-e1b7-467e-a00b-c7785be8e397" />
+            <div class="overlay">
+              <a
+                href="https://www.youtube.com/watch?v=aatr_2MstrI&ab_channel=CleanBandit"
+                target="_blank"
+                ><ion-icon name="logo-youtube"></ion-icon
+              ></a>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <img
+              src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/1afe4c6a-0287-43f0-9076-92f8be49d9dc" />
+            <div class="overlay">
+              <a
+                href="https://www.youtube.com/watch?v=qEnfeG8uBRY&ab_channel=AliciaKeys-Topic"
+                target="_blank"
+                ><ion-icon name="logo-youtube"></ion-icon
+              ></a>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <img
+              src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/abaa23bd-8c93-4219-a3ef-0d0cb6f12566" />
+            <div class="overlay">
+              <a
+                href="https://www.youtube.com/watch?v=LgsaD-vNJ9M"
+                target="_blank"
+                ><ion-icon name="logo-youtube"></ion-icon
+              ></a>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <img
+              src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/bd9bcc80-a9ab-4d54-a460-ffdb77f22a72" />
+            <div class="overlay">
+              <a
+                href="https://www.youtube.com/watch?v=a5uQMwRMHcs&ab_channel=DaftPunkVEVO"
+                target="_blank"
+                ><ion-icon name="logo-youtube"></ion-icon
+              ></a>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <img
+              src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/18bc2436-740b-44c4-9dd8-fd7be51a07ad" />
+            <div class="overlay">
+              <a
+                href="https://www.youtube.com/watch?v=H5v3kku4y6Q&ab_channel=HarryStylesVEVO"
+                target="_blank"
+                ><ion-icon name="logo-youtube"></ion-icon
+              ></a>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <img
+              src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/4c5c1727-8b32-48c1-91de-b0496ccf10f6" />
+            <div class="overlay">
+              <a
+                href="https://www.youtube.com/watch?v=9HDEHj2yzew&ab_channel=DuaLipa"
+                target="_blank"
+                ><ion-icon name="logo-youtube"></ion-icon
+              ></a>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <img
+              src="https://github.com/ecemgo/mini-samples-great-tricks/assets/13468728/23e440e5-a0fa-4a85-8175-bcc485a20ee6" />
+            <div class="overlay">
+              <a
+                href="https://www.youtube.com/watch?v=tCXGJQYZ9JA&ab_channel=TaylorSwiftVEVO"
+                target="_blank"
+                ><ion-icon name="logo-youtube"></ion-icon
+              ></a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-	<div class="music-item">
-      <div class="music-cover">
-        <img src="images/Повторил.webp" alt="Igor Leskov - Повторил" width="300" height="300" loading="eager">
-	      <a href="audio/Igor Leskov - Повторил.mp3" download class="download-button"
-           style="position: absolute; bottom: 10px; right: 10px; background-color: rgba(0,0,0,0.7); color: white; padding: 6px 12px; border-radius: 4px; text-decoration: none; font-size: 14px;">
-          ⬇
-        </a>
-	      <audio src="audio/Повторил.mp3" preload="metadata"></audio>
-        <input type="range" class="seek-bar" value="0" min="0" step="0.1" aria-label="Ползунок для перемотки аудиозаписи">
-        <button class="play-button" data-src="audio/Повторил.mp3">&#9658;</button>
+
+    <div class="music-player">
+      <h1>Title</h1>
+      <p>Song Name</p>
+
+      <audio id="song">
+        <source src="song-list/Luke-Bergs-Gold.mp3" type="audio/mpeg" />
+      </audio>
+
+      <input type="range" value="0" id="progress" />
+
+      <div class="controls">
+        <button class="backward">
+          <i class="fa-solid fa-backward"></i>
+        </button>
+        <button class="play-pause-btn">
+          <i class="fa-solid fa-play" id="controlIcon"></i>
+        </button>
+        <button class="forward">
+          <i class="fa-solid fa-forward"></i>
+        </button>
       </div>
-      <div class="music-info">
-    <label for="music-title">Повторил</label>
-   </div>
-   </div>
-    <div class="music-item">
-      <div class="music-cover">
-        <img src="images/Взрывной хит.webp" alt="Igor Leskov - Взрывной хит" width="300" height="300" loading="eager">
-	      <a href="audio/Igor Leskov - Взрывной хит.mp3" download class="download-button"
-           style="position: absolute; bottom: 10px; right: 10px; background-color: rgba(0,0,0,0.7); color: white; padding: 6px 12px; border-radius: 4px; text-decoration: none; font-size: 14px;">
-          ⬇
-        </a>
-	       <audio src="audio/Взрывной хит.mp3" preload="metadata"></audio>
-        <input type="range" class="seek-bar" value="0" min="0" step="0.1" aria-label="Ползунок для перемотки аудиозаписи">
-        <button class="play-button" data-src="audio/Взрывной хит.mp3">&#9658;</button>
-      </div>
-      <div class="music-info">
-    <label for="music-title">Взрывной хит</label>
-   </div>
-   </div>
-    <div class="music-item">
-      <div class="music-cover">
-        <img src="images/На вдохе.webp" alt="Igor Leskov - На вдохе" width="300" height="300" loading="eager">
-	      <a href="audio/Igor Leskov - На вдохе.mp3" download class="download-button"
-           style="position: absolute; bottom: 10px; right: 10px; background-color: rgba(0,0,0,0.7); color: white; padding: 6px 12px; border-radius: 4px; text-decoration: none; font-size: 14px;">
-          ⬇
-        </a>
-	       <audio src="audio/На вдохе.mp3" preload="metadata"></audio>
-        <input type="range" class="seek-bar" value="0" min="0" step="0.1" aria-label="Ползунок для перемотки аудиозаписи">
-        <button class="play-button" data-src="audio/На вдохе.mp3">&#9658;</button>
-      </div>
-      <div class="music-info">
-    <label for="music-title">На вдохе</label>
-   </div>
-   </div>
-    <div class="music-item">
-      <div class="music-cover">
-        <img src="images/Сыграй меня вновь.webp" alt="Igor Leskov - Сыграй меня вновь" width="300" height="300" loading="eager">
-	      <a href="audio/Igor Leskov - Сыграй меня вновь.mp3" download class="download-button"
-           style="position: absolute; bottom: 10px; right: 10px; background-color: rgba(0,0,0,0.7); color: white; padding: 6px 12px; border-radius: 4px; text-decoration: none; font-size: 14px;">
-          ⬇
-        </a>
-		<audio src="audio/Сыграй меня вновь.mp3" preload="metadata"></audio>
-        <input type="range" class="seek-bar" value="0" min="0" step="0.01" aria-label="Ползунок для перемотки аудиозаписи">
-        <button class="play-button" data-src="audio/Сыграй меня вновь.mp3">&#9658;</button>
-      </div>
-      <div class="music-info">
-    <label for="music-title">Сыграй меня вновь</label>
-   </div>
-   </div>
-	<div class="music-item">
-      <div class="music-cover">
-        <img src="images/Ты как дым.webp" alt="Igor Leskov - Ты как дым" width="300" height="300" loading="eager">
-	      <a href="audio/Igor Leskov - Ты как дым.mp3" download class="download-button"
-           style="position: absolute; bottom: 10px; right: 10px; background-color: rgba(0,0,0,0.7); color: white; padding: 6px 12px; border-radius: 4px; text-decoration: none; font-size: 14px;">
-          ⬇
-        </a>
-		<audio src="audio/Ты как дым.mp3" preload="metadata"></audio>
-        <input type="range" class="seek-bar" value="0" min="0" step="0.01" aria-label="Ползунок для перемотки аудиозаписи">
-        <button class="play-button" data-src="audio/Ты как дым.mp3">&#9658;</button>
-      </div>
-      <div class="music-info">
-    <label for="music-title">Ты как дым</label>
-   </div>
-   </div>
-      <div class="music-item">
-      <div class="music-cover">
-        <img src="images/До утра.webp" alt="Igor Leskov - До утра" width="300" height="300" loading="eager">
-	      <a href="audio/Igor Leskov - До утра.mp3" download class="download-button"
-           style="position: absolute; bottom: 10px; right: 10px; background-color: rgba(0,0,0,0.7); color: white; padding: 6px 12px; border-radius: 4px; text-decoration: none; font-size: 14px;">
-          ⬇
-        </a>
-		<audio src="audio/До утра.mp3" preload="metadata"></audio>
-        <input type="range" class="seek-bar" value="0" min="0" step="0.01" aria-label="Ползунок для перемотки аудиозаписи">
-        <button class="play-button" data-src="audio/До утра.mp3">&#9658;</button>
-      </div> 
-      <div class="music-info">
-    <label for="music-title">До утра</label>
-   </div>
-   </div>
-	<div class="music-item">
-      <div class="music-cover">
-        <img src="images/На repeat.webp" alt="Igor Leskov - На repeat" width="300" height="300" loading="eager">
-	      <a href="audio/Igor Leskov - На repeat.mp3" download class="download-button"
-           style="position: absolute; bottom: 10px; right: 10px; background-color: rgba(0,0,0,0.7); color: white; padding: 6px 12px; border-radius: 4px; text-decoration: none; font-size: 14px;">
-          ⬇
-        </a>
-		<audio src="audio/На repeat.mp3" preload="metadata"></audio>
-        <input type="range" class="seek-bar" value="0" min="0" step="0.01" aria-label="Ползунок для перемотки аудиозаписи">
-        <button class="play-button" data-src="audio/На repeat.mp3">&#9658;</button>
-      </div>
-      <div class="music-info">
-    <label for="music-title">На repeat</label>
-   </div>
-   </div>
-      <div class="music-item">
-      <div class="music-cover">
-        <img src="images/Потерянные сны.webp" alt="Igor Leskov - Потерянные сны" width="300" height="300" loading="eager">
-	      <a href="audio/Igor Leskov - Потерянные сны.mp3" download class="download-button"
-           style="position: absolute; bottom: 10px; right: 10px; background-color: rgba(0,0,0,0.7); color: white; padding: 6px 12px; border-radius: 4px; text-decoration: none; font-size: 14px;">
-          ⬇
-        </a>
-		<audio src="audio/Потерянные сны.mp3" preload="metadata"></audio>
-        <input type="range" class="seek-bar" value="0" min="0" step="0.01" aria-label="Ползунок для перемотки аудиозаписи">
-        <button class="play-button" data-src="audio/Потерянные сны.mp3">&#9658;</button>
-      </div>
-      <div class="music-info">
-    <label for="music-title">Потерянные сны</label>
-   </div>
-   </div>
-	<div class="music-item">
-      <div class="music-cover-2">
-        <img src="images/Пополам.webp" alt="Igor Leskov - Пополам" width="300" height="300" loading="eager">
-	      <a href="audio/Igor Leskov - Пополам.mp3" download class="download-button"
-           style="position: absolute; bottom: 10px; right: 10px; background-color: rgba(0,0,0,0.7); color: white; padding: 6px 12px; border-radius: 4px; text-decoration: none; font-size: 14px;">
-          ⬇
-        </a>
-		<audio src="audio/Пополам.mp3" preload="metadata"></audio>
-        <input type="range" class="seek-bar" value="0" min="0" step="0.01" aria-label="Ползунок для перемотки аудиозаписи">
-        <button class="play-button" data-src="audio/Пополам.mp3">&#9658;</button>
-      </div>
-      <div class="music-info">
-    <label for="music-title">Пополам</label>
-   </div>
-   </div>
-	<div class="music-item">
-      <div class="music-cover">
-        <img src="images/Франция.webp" alt="Igor Leskov - Франция" width="300" height="300" loading="eager">
-	      <a href="audio/Igor Leskov - Франция.mp3" download class="download-button"
-           style="position: absolute; bottom: 10px; right: 10px; background-color: rgba(0,0,0,0.7); color: white; padding: 6px 12px; border-radius: 4px; text-decoration: none; font-size: 14px;">
-          ⬇
-        </a>
-		<audio src="audio/Франция.mp3" preload="metadata"></audio>
-        <input type="range" class="seek-bar" value="0" min="0" step="0.01" aria-label="Ползунок для перемотки аудиозаписи">
-        <button class="play-button" data-src="audio/Франция.mp3">&#9658;</button>
-      </div>
-      <div class="music-info">
-    <label for="music-title">Франция</label>
-   </div>
-   </div>
-	<div class="music-item">
-      <div class="music-cover">
-        <img src="images/Качели мечты.webp" alt="Igor Leskov - Качели мечты" width="300" height="300" loading="eager">
-	      <a href="audio/Igor Leskov - Качели мечты.mp3" download class="download-button"
-           style="position: absolute; bottom: 10px; right: 10px; background-color: rgba(0,0,0,0.7); color: white; padding: 6px 12px; border-radius: 4px; text-decoration: none; font-size: 14px;">
-          ⬇
-        </a>
-		<audio src="audio/Качели мечты.mp3" preload="metadata"></audio>
-        <input type="range" class="seek-bar" value="0" min="0" step="0.01" aria-label="Ползунок для перемотки аудиозаписи">
-        <button class="play-button" data-src="audio/Качели мечты.mp3">&#9658;</button>
-      </div>
-      <div class="music-info">
-    <label for="music-title">Качели мечты</label>
-   </div>
-   </div>
-	<div class="music-item">
-      <div class="music-cover-2">
-        <img src="images/Любовь.webp" alt="Igor Leskov - Любовь" width="300" height="300" loading="eager">
-	      <a href="audio/Igor Leskov - Любовь.mp3" download class="download-button"
-           style="position: absolute; bottom: 10px; right: 10px; background-color: rgba(0,0,0,0.7); color: white; padding: 6px 12px; border-radius: 4px; text-decoration: none; font-size: 14px;">
-          ⬇
-        </a>
-		<audio src="audio/Любовь.mp3" preload="metadata"></audio>
-        <input type="range" class="seek-bar" value="0" min="0" step="0.01" aria-label="Ползунок для перемотки аудиозаписи">
-        <button class="play-button" data-src="audio/Любовь.mp3">&#9658;</button>
-      </div>
-      <div class="music-info">
-    <label for="music-title">Любовь</label>
-   </div>
-   </div>
-	<div class="music-item">
-      <div class="music-cover">
-        <img src="images/Нет!.webp" alt="Igor Leskov - Нет!" width="300" height="300" loading="eager">
-	      <a href="audio/Igor Leskov - Нет!.mp3" download class="download-button"
-           style="position: absolute; bottom: 10px; right: 10px; background-color: rgba(0,0,0,0.7); color: white; padding: 6px 12px; border-radius: 4px; text-decoration: none; font-size: 14px;">
-          ⬇
-        </a>
-		<audio src="audio/Нет!.mp3" preload="metadata"></audio>
-        <input type="range" class="seek-bar" value="0" min="0" step="0.01" aria-label="Ползунок для перемотки аудиозаписи">
-        <button class="play-button" data-src="audio/Нет!.mp3">&#9658;</button>
-      </div>
-      <div class="music-info">
-    <label for="music-title">Нет!</label>
-   </div>
-   </div>
-	<div class="music-item">
-      <div class="music-cover">
-        <img src="images/Я делаю шаг.webp" alt="Igor Leskov - Я делаю шаг" width="300" height="300" loading="eager">
-	      <a href="audio/Igor Leskov feat. EchoSoul - Я делаю шаг.mp3" download class="download-button"
-           style="position: absolute; bottom: 10px; right: 10px; background-color: rgba(0,0,0,0.7); color: white; padding: 6px 12px; border-radius: 4px; text-decoration: none; font-size: 14px;">
-          ⬇
-        </a>
-		<audio src="audio/Я делаю шаг.mp3" preload="metadata"></audio>
-        <input type="range" class="seek-bar" value="0" min="0" step="0.01" aria-label="Ползунок для перемотки аудиозаписи">
-        <button class="play-button" data-src="audio/Я делаю шаг.mp3">&#9658;</button>
-      </div>
-      <div class="music-info">
-    <label for="music-title">Я делаю шаг</label>
-   </div>
-   </div>
-	<div class="music-item">
-      <div class="music-cover">
-        <img src="images/Прости.webp" alt="Igor Leskov - Прости" width="300" height="300" loading="eager">
-	      <a href="audio/Igor Leskov - Прости.mp3" download class="download-button"
-           style="position: absolute; bottom: 10px; right: 10px; background-color: rgba(0,0,0,0.7); color: white; padding: 6px 12px; border-radius: 4px; text-decoration: none; font-size: 14px;">
-          ⬇
-        </a>
-		<audio src="audio/Прости.mp3" preload="metadata"></audio>
-        <input type="range" class="seek-bar" value="0" min="0" step="0.01" aria-label="Ползунок для перемотки аудиозаписи">
-        <button class="play-button" data-src="audio/Прости.mp3">&#9658;</button>
-      </div>
-      <div class="music-info">
-    <label for="music-title">Прости</label>
-   </div>
-   </div>
-<div class="music-item">
-      <div class="music-cover-2">
-        <img src="images/Твой цветок, это розы.webp" alt="Igor Leskov - Твой цветок, это розы" width="300" height="300" loading="eager">
-	       <a href="audio/Tvoy-cvetok-eto-rozy1.mp3"
-         download="Igor Leskov - Твой цветок, это розы.mp3"
-              class="download-button"
-         style="position: absolute; bottom: 10px; right: 10px; background-color: rgba(0,0,0,0.7); color: white; padding: 6px 12px; border-radius: 4px; text-decoration: none; font-size: 14px;">
-               ⬇
-               </a>
-		<audio src="audio/Tvoy-cvetok-eto-rozy.mp3" preload="metadata"></audio>
-        <input type="range" class="seek-bar" value="0" min="0" step="0.01" aria-label="Ползунок для перемотки аудиозаписи">
-        <button class="play-button" data-src="audio/Tvoy-cvetok-eto-rozy.mp3">&#9658;</button>
-      </div>
-      <div class="music-info">
-    <label for="music-title">Твой цветок, это розы</label>
-   </div>
-   </div>
+    </div>
   </section>
 
      <section id="news" class="section">
