@@ -4,7 +4,7 @@
     max-width: 1440px;
     padding: 0 3rem;
     margin: 0 auto;
-    overflow: hidden; /* оставляем hidden, чтобы ничего не вылезало */
+    overflow: hidden; 
     align-items: flex-start;
     justify-content: center;
     flex-wrap: wrap;
@@ -29,7 +29,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden; /* чтобы содержимое не вылезало за скругленные края */
+    overflow: hidden; 
     position: relative;
 }
 
@@ -64,7 +64,6 @@
     opacity: 0;
     transition: opacity 0.5s ease;
     pointer-events: none;
-    /* добавляем скругление нижних углов, чтобы совпадало с родителем */
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
 }
