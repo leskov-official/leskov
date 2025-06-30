@@ -4,7 +4,7 @@
     max-width: 1440px;
     padding: 0 3rem;
     margin: 0 auto;
-    overflow: auto;
+    overflow: hidden; 
     align-items: flex-start;
     justify-content: center;
     flex-wrap: wrap;
@@ -30,6 +30,7 @@
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    position: relative;
 }
 
 .card__inner picture {
@@ -48,6 +49,27 @@
     height: 100%;
     object-fit: cover;
     object-position: center;
+}
+
+.card__caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 0.6rem;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    font-size: 0.9rem;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    pointer-events: none;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.card:hover .card__caption {
+    opacity: 1;
 }
 
 .container .card:nth-child(2),
@@ -75,29 +97,3 @@
 .container .card:nth-child(15) {
     margin-top: 5%;
 }
-
-.card__caption {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: 0.6rem;
-    background: rgba(0, 0, 0, 0.6);
-    color: #fff;
-    font-size: 0.9rem;
-    text-align: center;
-    opacity: 0;
-    transition: opacity 0.5s ease;
-    pointer-events: none;
-}
-
-.card:hover .card__caption {
-    opacity: 1;
-    transition: opacity 0.5s ease;
-}
-
-.card:not(:hover) .card__caption {
-    opacity: 0;
-    transition: none;
-}
-
