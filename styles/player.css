@@ -11,7 +11,6 @@
   font-family: "Nunito", sans-serif;
 }
 
-/* Вместо body - отдельный класс для секции */
 .music-section-background {
   position: relative;
   display: flex;
@@ -28,7 +27,8 @@
 }
 
 @keyframes slidein {
-  0%, 100% {
+  0%,
+  100% {
     background-position: 20% 0%;
     background-size: 3400px;
   }
