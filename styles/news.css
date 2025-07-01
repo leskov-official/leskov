@@ -109,6 +109,9 @@
            font-size: 18px;
            transition: 0.6s ease;
            user-select: none;
+	   display: flex;             
+           align-items: center;     
+           justify-content: center;
         }
 
         .next1 {
