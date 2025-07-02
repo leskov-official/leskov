@@ -1,5 +1,5 @@
 function changeSlide(direction) {
-  var slides = document.querySelectorAll('.slide');
+  var slides = document.querySelectorAll('.carousel .slide');
   var currentSlide = Array.from(slides).findIndex(slide => slide.classList.contains('active'));
   slides[currentSlide].classList.remove('active'); 
 
@@ -11,15 +11,14 @@ function changeSlide(direction) {
   }
 
   slides[newSlideIndex].classList.add('active'); 
-}
 
-// Сохраняем индекс текущего слайда в localStorage
+  // Сохраняем индекс текущего слайда в localStorage
   localStorage.setItem('currentSlide', newSlideIndex);
 }
 
 // Восстанавливаем индекс слайда при загрузке страницы
 window.onload = function() {
-  var slides = document.querySelectorAll('.slide');
+  var slides = document.querySelectorAll('.carousel .slide');
   var savedSlideIndex = localStorage.getItem('currentSlide');
 
   if (savedSlideIndex !== null) {
@@ -33,3 +32,4 @@ window.onload = function() {
     slides[0].classList.add('active');
   }
 };
+
