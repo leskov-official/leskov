@@ -1,80 +1,65 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <link rel="icon" href="images/dark-favicon.png" type="image/x-icon">
-    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.webp">
-   <link rel="manifest" href="/manifest.json">
-    <link rel="sitemap" type="application/xml" href="sitemap.xml">
-	<link rel="preload" href="styles/header_footer.css" as="style">
-    <link rel="preload" href="styles/section.css" as="style">
-    <link rel="preload" href="styles/gallery.css" as="style">
-    <link rel="preload" href="styles/language_switcher.css" as="style">
-    <link rel="preload" href="styles/modal_image.css" as="style">
-    <link rel="preload" href="styles/music.css" as="style">
-	<link rel="preload" href="styles/video_container.css" as="style">
-	<link rel="preload" href="images/1.webp" as="image">
-	<link rel="preload" href="images/2.webp" as="image">
-    <link rel="preload" href="images/3.webp" as="image">
-    <link rel="preload" href="images/O.webp" as="image">
-    <link rel="preload" href="images/TS!.webp" as="image">
-    <link rel="preload" href="images/TS!1.webp" as="image">
-    <link rel="preload" href="images/TS!2.webp" as="image">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="canonical" href="https://leskov.online/index.html">
-	<meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Leskov - Vene</title>
-    <meta name="description" content="Официальный сайт Leskov. Последние новости, музыка, видео биография и галерея.">
-    <meta property="og:image" content="images/ICON.png">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta name="keywords" content="Igor Leskov, Игорь Лесков, певец, музыка, новости, видео, биография, галерея">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4881517487672180" crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Leskov - Vene</title>
+  <meta name="description" content="Официальный сайт Leskov. Последние новости, музыка, видео, биография и галерея.">
+  <meta name="keywords" content="Igor Leskov, Игорь Лесков, певец, музыка, новости, видео, биография, галерея">
+  <meta property="og:image" content="images/ICON.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <!-- Favicon / App Icons -->
+  <link rel="icon" href="images/dark-favicon.png" type="image/x-icon">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.webp">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="canonical" href="https://leskov.online/index.html">
+  <link rel="sitemap" type="application/xml" href="sitemap.xml">
+
+  <!-- Fonts & Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <!-- Preload CSS (as=style + rel=preload + onload fallback) -->
+  <link rel="preload" href="styles/header_footer.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="styles/cookie.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="styles/scroll_right_icon.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="styles/section.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="styles/language_switcher.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="styles/music.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="styles/photo.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="styles/video_container.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="styles/store.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="styles/news.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="styles/artist_info.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+  <!-- Preload images for LCP optimization -->
+  <link rel="preload" href="images/1.webp" as="image">
+  <link rel="preload" href="images/2.webp" as="image">
+  <link rel="preload" href="images/3.webp" as="image">
+  <link rel="preload" href="images/O.webp" as="image">
+  <link rel="preload" href="images/TS!.webp" as="image">
+  <link rel="preload" href="images/TS!1.webp" as="image">
+  <link rel="preload" href="images/TS!2.webp" as="image">
+
+  <!-- Fallback styles for no-JS (in case preload fails) -->
+  <noscript>
+    <link rel="stylesheet" href="styles/header_footer.css">
+    <link rel="stylesheet" href="styles/artist_info.css">
+    <link rel="stylesheet" href="styles/cookie.css">
+    <link rel="stylesheet" href="styles/section.css">
+    <link rel="stylesheet" href="styles/language_switcher.css">
+    <link rel="stylesheet" href="styles/music.css">
+    <link rel="stylesheet" href="styles/news.css">
+    <link rel="stylesheet" href="styles/video_container.css">
+    <link rel="stylesheet" href="styles/scroll_right_icon.css">
+    <link rel="stylesheet" href="styles/store.css">
+    <link rel="stylesheet" href="styles/photo.css">
+  </noscript>
+
+  <!-- Ads (load asynchronously) -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4881517487672180" crossorigin="anonymous"></script>
 	
-	<style>
-    @import url('styles/header_footer.css') all;
-    </style>
-
-    <style>
-    @import url('styles/artist_info.css') all;
-    </style>
-
-    <style>
-    @import url('styles/cookie.css') all;
-    </style>
-
-    <style>
-    @import url('styles/section.css') all;
-    </style>
-
-    <style>
-    @import url('styles/language_switcher.css') all;
-    </style>
-
-    <style>
-    @import url('styles/music.css') all;
-    </style>
-
-    <style>
-    @import url('styles/news.css') all;
-    </style>
-
-    <style>
-    @import url('styles/video_container.css') all;
-    </style>
-	
-	<style>
-    @import url('styles/scroll_right_icon.css') all; 
-    </style>
-
-	<style>
-    @import url('styles/store.css') all;
-    </style>
-
-	<style>
-    @import url('styles/photo.css') all;
-    </style>
-
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-NYMTZ8N93D"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
