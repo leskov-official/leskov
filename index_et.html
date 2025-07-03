@@ -125,10 +125,10 @@
 	<div id="preloader">
   <div id="preloader-content">
     <div id="logo">
-      <img src="images/logo.webp" alt="&copy; логотип Leskov" loading="eager" style="height: 80px;" />
+      <img src="images/logo.webp" alt="logo Leskov" loading="eager" style="height: 80px;" />
     </div>
     <div id="description">
-      Загрузка сайта, пожалуйста подождите<span id="dots-container"><span id="dots"></span></span>
+      Laadimine, palun oodake<span id="dots-container"><span id="dots"></span></span>
     </div>
   </div>
 </div>
@@ -140,7 +140,7 @@
 	<header>
     <a href="index_et.html">
         <div class="logo">
-        <img src="images/logo.webp" alt="&copy; logo Igor Leskov" width="60" height="60" loading="eager" class="frame">
+        <img src="images/logo.webp" alt="&copy; logo Leskov" width="60" height="60" loading="eager" class="frame">
     </div>
     </a>
     <nav>
@@ -994,7 +994,7 @@ Meie liidu arvestuses – neli esikohta ja üks kolmas koht 🎶</p>
 	const dots = document.getElementById('dots');
   let dotCount = 0;
   const dotInterval = setInterval(() => {
-    dotCount = (dotCount + 1) % 4; // 0 → 1 → 2 → 3 → 0
+    dotCount = (dotCount + 1) % 4; 
     if (dots) dots.textContent = '.'.repeat(dotCount);
   }, 400);
 
