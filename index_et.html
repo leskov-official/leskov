@@ -1,82 +1,61 @@
 <!DOCTYPE html>
 <html lang="et">
 <head>
-    <link rel="icon" href="images/dark-favicon.png" type="image/x-icon">
-    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.webp">
-    <link rel="manifest" href="/manifest.json">
-    <link rel="sitemap" type="application/xml" href="sitemap.xml">
-	<link rel="preload" href="styles/header_footer.css" as="style">
-    <link rel="preload" href="styles/section.css" as="style">
-    <link rel="preload" href="styles/gallery.css" as="style">
-    <link rel="preload" href="styles/language_switcher.css" as="style">
-    <link rel="preload" href="styles/modal_image.css" as="style">
-    <link rel="preload" href="styles/music.css" as="style">
-	<link rel="preload" href="styles/video_container.css" as="style">
-	<link rel="preload" href="images/1.webp" as="image">
-	<link rel="preload" href="images/2.webp" as="image">
-    <link rel="preload" href="images/3.webp" as="image">
-	<link rel="preload" href="images/O.webp" as="image">
-    <link rel="preload" href="images/TS!.webp" as="image">
-    <link rel="preload" href="images/TS!1.webp" as="image">
-    <link rel="preload" href="images/TS!2.webp" as="image">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-	<link rel="canonical" href="https://leskov.online/index_et.html">
-	<meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Leskov - Eesti</title>
-    <meta name="description" content="Leskov ametlik veebisait. Viimased uudised, muusika, videod, biograafia ja galerii.">
-    <meta property="og:image" content="images/ICON.png">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta name="keywords" content="Igor Leskov, laulja, muusika, uudised, videod, biograafia, galerii">
-	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4881517487672180" crossorigin="anonymous"></script>
-	
-	<style>
-    @import url('styles/header_footer.css') all;
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Leskov - Eesti</title>
+  <meta name="description" content="Leskov ametlik veebisait. Viimased uudised, muusika, videod, biograafia ja galerii.">
+  <meta name="keywords" content="Igor Leskov, laulja, muusika, uudised, videod, biograafia, galerii">
+  <meta property="og:image" content="images/ICON.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
 
-    <style>
-    @import url('styles/artist_info.css') all;
-    </style>
+  <!-- Favicon / App Icons -->
+  <link rel="icon" href="images/dark-favicon.png" type="image/x-icon">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.webp">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="canonical" href="https://leskov.online/index_et.html">
+  <link rel="sitemap" type="application/xml" href="sitemap.xml">
 
-    <style>
-    @import url('styles/cookie.css') all;
-    </style>
+  <!-- Preload CSS (as=style + rel=preload + onload fallback) -->
+  <link rel="preload" href="styles/header_footer.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="styles/cookie.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="styles/scroll_right_icon.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="styles/section.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="styles/language_switcher.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="styles/music.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="styles/photo.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="styles/video_container.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="styles/store.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="styles/news.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="styles/artist_info.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
 
-    <style>
-    @import url('styles/section.css') all;
-    </style>
+  <!-- Preload images for LCP optimization -->
+  <link rel="preload" href="images/1.webp" as="image">
+  <link rel="preload" href="images/2.webp" as="image">
+  <link rel="preload" href="images/3.webp" as="image">
+  <link rel="preload" href="images/O.webp" as="image">
+  <link rel="preload" href="images/TS!.webp" as="image">
+  <link rel="preload" href="images/TS!1.webp" as="image">
+  <link rel="preload" href="images/TS!2.webp" as="image">
 
-    <style>
-    @import url('styles/language_switcher.css') all;
-    </style>
-
-    <style>
-    @import url('styles/music.css') all;
-    </style>
-
-    <style>
-    @import url('styles/news.css') all;
-    </style>
-
-    <style>
-    @import url('styles/video_container.css') all;
-    </style>
-	
-	<style>
-    @import url('styles/scroll_right_icon.css') all;
-    </style>
-
-	<style>
-    @import url('styles/store.css') all;
-    </style>
-
-	<style>
-    @import url('styles/photo-1.css') all;
-    </style>
-
+  <!-- Fallback styles for no-JS (in case preload fails) -->
+  <noscript>
+    <link rel="stylesheet" href="styles/header_footer.css">
+    <link rel="stylesheet" href="styles/artist_info.css">
+    <link rel="stylesheet" href="styles/cookie.css">
+    <link rel="stylesheet" href="styles/section.css">
+    <link rel="stylesheet" href="styles/language_switcher.css">
+    <link rel="stylesheet" href="styles/music.css">
+    <link rel="stylesheet" href="styles/news.css">
+    <link rel="stylesheet" href="styles/video_container.css">
+    <link rel="stylesheet" href="styles/scroll_right_icon.css">
+    <link rel="stylesheet" href="styles/store.css">
+    <link rel="stylesheet" href="styles/photo-1.css">
+  </noscript>
 
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-NYMTZ8N93D"></script>
+
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -109,8 +88,8 @@
     </ul>
 </nav>
     <div class="language-switcher">
-        <a href="index.html" class="language-link" data-lang="ru"><img src="images/ru-flag.webp" alt="Vene keel" loading="eager"></a>
-		<a href="index_et.html" class="language-link" data-lang="et"><img src="images/et-flag.webp" alt="Eesti keel" loading="eager"></a>
+        <a href="index.html" class="language-link" data-lang="ru"><img src="images/ru-flag.webp" alt="Vene keel" width="40" height="40" loading="eager"></a>
+		<a href="index_et.html" class="language-link" data-lang="et"><img src="images/et-flag.webp" alt="Eesti keel" width="40" height="40" loading="eager"></a>
         
     </div>
 </header>
@@ -285,7 +264,7 @@
   <div class="music-container">
     <div class="music-item">
       <div class="music-cover-1" style="position: relative; display: inline-block;">
-        <img src="images/Просто рядом.webp" alt="Igor Leskov - Prosto ryadom" width="300" height="300" loading="eager">
+        <img src="images/Просто рядом.webp" alt="Igor Leskov - Prosto ryadom" width="200" height="200" loading="eager" style="aspect-ratio: 1 / 1;">
 <a href="audio/Igor Leskov - Просто рядом.mp3" download class="download-button"
            style="position: absolute; bottom: 10px; right: 10px; background-color: rgba(0,0,0,0.7); color: white; padding: 6px 12px; border-radius: 4px; text-decoration: none; font-size: 14px;">
           ⬇
@@ -303,7 +282,7 @@
     </div>
 	<div class="music-item">
       <div class="music-cover">
-        <img src="images/Повторил.webp" alt="Igor Leskov - Povtoril" width="300" height="300" loading="eager">
+        <img src="images/Повторил.webp" alt="Igor Leskov - Povtoril" width="200" height="200" loading="eager" style="aspect-ratio: 1 / 1;">
 	      <a href="audio/Igor Leskov - Повторил.mp3" download class="download-button"
            style="position: absolute; bottom: 10px; right: 10px; background-color: rgba(0,0,0,0.7); color: white; padding: 6px 12px; border-radius: 4px; text-decoration: none; font-size: 14px;">
           ⬇
@@ -318,7 +297,7 @@
    </div>
     <div class="music-item">
       <div class="music-cover">
-        <img src="images/Взрывной хит.webp" alt="Igor Leskov - Vzryvnoy khit" width="300" height="300" loading="eager">
+        <img src="images/Взрывной хит.webp" alt="Igor Leskov - Vzryvnoy khit" width="200" height="200" loading="eager" style="aspect-ratio: 1 / 1;">
 	      <a href="audio/Igor Leskov - Взрывной хит.mp3" download class="download-button"
            style="position: absolute; bottom: 10px; right: 10px; background-color: rgba(0,0,0,0.7); color: white; padding: 6px 12px; border-radius: 4px; text-decoration: none; font-size: 14px;">
           ⬇
@@ -333,7 +312,7 @@
    </div>
     <div class="music-item">
       <div class="music-cover">
-        <img src="images/На вдохе.webp" alt="Igor Leskov - Na vdokhe" width="300" height="300" loading="eager">
+        <img src="images/На вдохе.webp" alt="Igor Leskov - Na vdokhe" width="200" height="200" loading="eager" style="aspect-ratio: 1 / 1;">
 	      <a href="audio/Igor Leskov - На вдохе.mp3" download class="download-button"
            style="position: absolute; bottom: 10px; right: 10px; background-color: rgba(0,0,0,0.7); color: white; padding: 6px 12px; border-radius: 4px; text-decoration: none; font-size: 14px;">
           ⬇
@@ -348,7 +327,7 @@
    </div>
     <div class="music-item">
       <div class="music-cover">
-        <img src="images/Сыграй меня вновь.webp" alt="Igor Leskov - Sygray menya vnov" width="300" height="300" loading="eager">
+        <img src="images/Сыграй меня вновь.webp" alt="Igor Leskov - Sygray menya vnov" width="200" height="200" loading="eager" style="aspect-ratio: 1 / 1;">
 	      <a href="audio/Igor Leskov - Сыграй меня вновь.mp3" download class="download-button"
            style="position: absolute; bottom: 10px; right: 10px; background-color: rgba(0,0,0,0.7); color: white; padding: 6px 12px; border-radius: 4px; text-decoration: none; font-size: 14px;">
           ⬇
@@ -363,7 +342,7 @@
    </div>
 	<div class="music-item">
       <div class="music-cover">
-        <img src="images/Ты как дым.webp" alt="Igor Leskov - Ty kak dym" width="300" height="300" loading="eager">
+        <img src="images/Ты как дым.webp" alt="Igor Leskov - Ty kak dym" width="200" height="200" loading="eager" style="aspect-ratio: 1 / 1;">
 	      <a href="audio/Igor Leskov - Ты как дым.mp3" download class="download-button"
            style="position: absolute; bottom: 10px; right: 10px; background-color: rgba(0,0,0,0.7); color: white; padding: 6px 12px; border-radius: 4px; text-decoration: none; font-size: 14px;">
           ⬇
@@ -378,7 +357,7 @@
    </div>
       <div class="music-item">
       <div class="music-cover">
-        <img src="images/До утра.webp" alt="Igor Leskov - Do utra" width="300" height="300" loading="eager">
+        <img src="images/До утра.webp" alt="Igor Leskov - Do utra" width="200" height="200" loading="eager" style="aspect-ratio: 1 / 1;">
 	      <a href="audio/Igor Leskov - До утра.mp3" download class="download-button"
            style="position: absolute; bottom: 10px; right: 10px; background-color: rgba(0,0,0,0.7); color: white; padding: 6px 12px; border-radius: 4px; text-decoration: none; font-size: 14px;">
           ⬇
@@ -393,7 +372,7 @@
    </div>
 	<div class="music-item">
       <div class="music-cover">
-        <img src="images/На repeat.webp" alt="Igor Leskov - Na repeat" width="300" height="300" loading="eager">
+        <img src="images/На repeat.webp" alt="Igor Leskov - Na repeat" width="200" height="200" loading="eager" style="aspect-ratio: 1 / 1;">
 	      <a href="audio/Igor Leskov - На repeat.mp3" download class="download-button"
            style="position: absolute; bottom: 10px; right: 10px; background-color: rgba(0,0,0,0.7); color: white; padding: 6px 12px; border-radius: 4px; text-decoration: none; font-size: 14px;">
           ⬇
@@ -408,7 +387,7 @@
    </div>
       <div class="music-item">
       <div class="music-cover">
-        <img src="images/Потерянные сны.webp" alt="Igor Leskov - Poteryannye sny" width="300" height="300" loading="eager">
+        <img src="images/Потерянные сны.webp" alt="Igor Leskov - Poteryannye sny" width="200" height="200" loading="eager" style="aspect-ratio: 1 / 1;">
 	      <a href="audio/Igor Leskov - Потерянные сны.mp3" download class="download-button"
            style="position: absolute; bottom: 10px; right: 10px; background-color: rgba(0,0,0,0.7); color: white; padding: 6px 12px; border-radius: 4px; text-decoration: none; font-size: 14px;">
           ⬇
@@ -423,7 +402,7 @@
    </div>
 	<div class="music-item">
       <div class="music-cover-2">
-        <img src="images/Пополам.webp" alt="Igor Leskov - Popolam" width="300" height="300" loading="eager">
+        <img src="images/Пополам.webp" alt="Igor Leskov - Popolam" width="200" height="200" loading="eager" style="aspect-ratio: 1 / 1;">
 	      <a href="audio/Igor Leskov - Пополам.mp3" download class="download-button"
            style="position: absolute; bottom: 10px; right: 10px; background-color: rgba(0,0,0,0.7); color: white; padding: 6px 12px; border-radius: 4px; text-decoration: none; font-size: 14px;">
           ⬇
@@ -438,7 +417,7 @@
    </div>
 	<div class="music-item">
       <div class="music-cover">
-        <img src="images/Франция.webp" alt="Igor Leskov - Frantsiya" width="300" height="300" loading="eager">
+        <img src="images/Франция.webp" alt="Igor Leskov - Frantsiya" width="200" height="200" loading="eager" style="aspect-ratio: 1 / 1;">
 	      <a href="audio/Igor Leskov - Франция.mp3" download class="download-button"
            style="position: absolute; bottom: 10px; right: 10px; background-color: rgba(0,0,0,0.7); color: white; padding: 6px 12px; border-radius: 4px; text-decoration: none; font-size: 14px;">
           ⬇
@@ -453,7 +432,7 @@
    </div>
 	<div class="music-item">
       <div class="music-cover">
-        <img src="images/Качели мечты.webp" alt="Igor Leskov - Kacheli mechty" width="300" height="300" loading="eager">
+        <img src="images/Качели мечты.webp" alt="Igor Leskov - Kacheli mechty" width="200" height="200" loading="eager" style="aspect-ratio: 1 / 1;">
 	      <a href="audio/Igor Leskov - Качели мечты.mp3" download class="download-button"
            style="position: absolute; bottom: 10px; right: 10px; background-color: rgba(0,0,0,0.7); color: white; padding: 6px 12px; border-radius: 4px; text-decoration: none; font-size: 14px;">
           ⬇
@@ -468,7 +447,7 @@
    </div>
 	<div class="music-item">
       <div class="music-cover-2">
-        <img src="images/Любовь.webp" alt="Igor Leskov - Lyubov" width="300" height="300" loading="eager">
+        <img src="images/Любовь.webp" alt="Igor Leskov - Lyubov" width="200" height="200" loading="eager" style="aspect-ratio: 1 / 1;">
 	      <a href="audio/Igor Leskov - Любовь.mp3" download class="download-button"
            style="position: absolute; bottom: 10px; right: 10px; background-color: rgba(0,0,0,0.7); color: white; padding: 6px 12px; border-radius: 4px; text-decoration: none; font-size: 14px;">
           ⬇
@@ -483,7 +462,7 @@
    </div>
 	<div class="music-item">
       <div class="music-cover">
-        <img src="images/Нет!.webp" alt="Igor Leskov - Net!" width="300" height="300" loading="eager">
+        <img src="images/Нет!.webp" alt="Igor Leskov - Net!" width="200" height="200" loading="eager" style="aspect-ratio: 1 / 1;">
 	      <a href="audio/Igor Leskov - Нет!.mp3" download class="download-button"
            style="position: absolute; bottom: 10px; right: 10px; background-color: rgba(0,0,0,0.7); color: white; padding: 6px 12px; border-radius: 4px; text-decoration: none; font-size: 14px;">
           ⬇
@@ -498,7 +477,7 @@
    </div>
 	<div class="music-item">
       <div class="music-cover">
-        <img src="images/Я делаю шаг.webp" alt="Igor Leskov - Ya delayu shag" width="300" height="300" loading="eager">
+        <img src="images/Я делаю шаг.webp" alt="Igor Leskov - Ya delayu shag" width="200" height="200" loading="eager" style="aspect-ratio: 1 / 1;">
 	      <a href="audio/Igor Leskov feat. EchoSoul - Я делаю шаг.mp3" download class="download-button"
            style="position: absolute; bottom: 10px; right: 10px; background-color: rgba(0,0,0,0.7); color: white; padding: 6px 12px; border-radius: 4px; text-decoration: none; font-size: 14px;">
           ⬇
@@ -513,7 +492,7 @@
    </div>
 	<div class="music-item">
       <div class="music-cover">
-        <img src="images/Прости.webp" alt="Igor Leskov - Prosti" width="300" height="300" loading="eager">
+        <img src="images/Прости.webp" alt="Igor Leskov - Prosti" width="200" height="200" loading="eager" style="aspect-ratio: 1 / 1;">
 	      <a href="audio/Igor Leskov - Прости.mp3" download class="download-button"
            style="position: absolute; bottom: 10px; right: 10px; background-color: rgba(0,0,0,0.7); color: white; padding: 6px 12px; border-radius: 4px; text-decoration: none; font-size: 14px;">
           ⬇
@@ -528,7 +507,7 @@
    </div>
 <div class="music-item">
       <div class="music-cover-2">
-        <img src="images/Твой цветок, это розы.webp" alt="Igor Leskov - Tvoy tsvetok, eto rozy" width="300" height="300" loading="eager">
+        <img src="images/Твой цветок, это розы.webp" alt="Igor Leskov - Tvoy tsvetok, eto rozy" width="200" height="200" loading="eager" style="aspect-ratio: 1 / 1;">
 	       <a href="audio/Tvoy-cvetok-eto-rozy1.mp3"
          download="Igor Leskov - Твой цветок, это розы.mp3"
               class="download-button"
@@ -675,7 +654,7 @@ Meie liidu arvestuses – neli esikohta ja üks kolmas koht 🎶</p>
     <div class="video-container">
 
     <div class="video-item">
-      <video controls class="video" data-key="video3" poster="images/TS!.webp">
+      <video preload="none" controls class="video" data-key="video3" width="300" height="169" poster="images/TS!.webp">
         <source src="video/video3.mp4" type="video/mp4">
         Teie brauser ei toeta videot.
       </video>
@@ -683,7 +662,7 @@ Meie liidu arvestuses – neli esikohta ja üks kolmas koht 🎶</p>
     </div>
 
     <div class="video-item">
-      <video controls class="video" data-key="video4" poster="images/TS!1.webp">
+      <video preload="none" controls class="video" data-key="video4" width="300" height="169" poster="images/TS!1.webp">
         <source src="video/video4.mp4" type="video/mp4">
         Teie brauser ei toeta videot.
       </video>
@@ -691,7 +670,7 @@ Meie liidu arvestuses – neli esikohta ja üks kolmas koht 🎶</p>
     </div>
 
     <div class="video-item">
-      <video controls class="video" data-key="video5" poster="images/TS!2.webp">
+      <video preload="none" controls class="video" data-key="video5" width="300" height="169" poster="images/TS!2.webp">
         <source src="video/video5.mp4" type="video/mp4">
         Teie brauser ei toeta videot.
       </video>
@@ -708,7 +687,7 @@ Meie liidu arvestuses – neli esikohta ja üks kolmas koht 🎶</p>
     <div class="card">
   <div class="card__inner">
     <picture>
-      <img src="images/image1c.webp" alt="Pavel Shelli kontsert «Ma olen siin!» Kohtla-Järve Kultuurikeskuses, 15.12.2019" width="800" height="800" loading="eager">
+      <img src="images/image1c.webp" alt="Pavel Shelli kontsert «Ma olen siin!» Kohtla-Järve Kultuurikeskuses, 15.12.2019" width="400" height="400" loading="lazy">
     </picture>
     <div class="card__caption">Pavel Shelli kontsert «Ma olen siin!» Kohtla-Järve Kultuurikeskuses, 15.12.2019 a.</div>
   </div>
@@ -716,7 +695,7 @@ Meie liidu arvestuses – neli esikohta ja üks kolmas koht 🎶</p>
     <div class="card">
       <div class="card__inner">
         <picture>
-          <img src="images/image2c.webp" alt="Kontsert Tallinnas, 2021" width="800" height="800" loading="eager">
+          <img src="images/image2c.webp" alt="Kontsert Tallinnas, 2021" width="400" height="400" loading="lazy">
         </picture>
       <div class="card__caption">Kontsert Tallinnas, 2021 a.</div>
   </div>
@@ -724,7 +703,7 @@ Meie liidu arvestuses – neli esikohta ja üks kolmas koht 🎶</p>
     <div class="card">
       <div class="card__inner">
         <picture>
-          <img src="images/image3c.webp" alt="«Laulumaraton 2.0» Sillamäel, 15.08.2020" width="800" height="800" loading="eager">
+          <img src="images/image3c.webp" alt="«Laulumaraton 2.0» Sillamäel, 15.08.2020" width="400" height="400" loading="lazy">
         </picture>
 	      <div class="card__caption">«Laulumaraton 2.0» Sillamäel, 15.08.2020 a.</div>
       </div>
@@ -732,7 +711,7 @@ Meie liidu arvestuses – neli esikohta ja üks kolmas koht 🎶</p>
     <div class="card">
       <div class="card__inner">
         <picture>
-          <img src="images/image4c.webp" alt="Perepäev, pühendatud valla juubelile Kohtla-Nõmmel, koos Eesti laulja Ott Leplandiga, 23.09.2017" width="800" height="800" loading="eager">
+          <img src="images/image4c.webp" alt="Perepäev, pühendatud valla juubelile Kohtla-Nõmmel, koos Eesti laulja Ott Leplandiga, 23.09.2017" width="400" height="400" loading="lazy">
         </picture>
 	      <div class="card__caption">Perepäev, pühendatud valla juubelile Kohtla-Nõmmel, koos Eesti laulja Ott Leplandiga, 23.09.2017 a.</div>
       </div>
@@ -740,7 +719,7 @@ Meie liidu arvestuses – neli esikohta ja üks kolmas koht 🎶</p>
     <div class="card">
       <div class="card__inner">
         <picture>
-          <img src="images/image5c.webp" alt="MTÜ «Südamete Soojus» kontsert Tallinnas, 29.05.2018" width="800" height="800" loading="eager">
+          <img src="images/image5c.webp" alt="MTÜ «Südamete Soojus» kontsert Tallinnas, 29.05.2018" width="400" height="400" loading="lazy">
         </picture>
 	      <div class="card__caption">MTÜ «Südamete Soojus» kontsert Tallinnas, 29.05.2018 a.</div>
       </div>
@@ -748,7 +727,7 @@ Meie liidu arvestuses – neli esikohta ja üks kolmas koht 🎶</p>
     <div class="card">
       <div class="card__inner">
         <picture>
-          <img src="images/image6c.webp" alt="Gala-kontsert «Kremlis Palee» koos Eesti laulja Anne Veskiga, 05.03.2019" width="800" height="800" loading="eager">
+          <img src="images/image6c.webp" alt="Gala-kontsert «Kremlis Palee» koos Eesti laulja Anne Veskiga, 05.03.2019" width="400" height="400" loading="lazy">
         </picture>
 	      <div class="card__caption">Gala-kontsert «Kremlis Palee» koos Eesti laulja Anne Veskiga, 05.03.2019 a.</div>
       </div>
@@ -756,7 +735,7 @@ Meie liidu arvestuses – neli esikohta ja üks kolmas koht 🎶</p>
     <div class="card">
       <div class="card__inner">
         <picture>
-          <img src="images/image7c.webp" alt="Suve muusika kõlas Kohtla-Järvel, 22.07.2021" width="800" height="800" loading="eager">
+          <img src="images/image7c.webp" alt="Suve muusika kõlas Kohtla-Järvel, 22.07.2021" width="400" height="400" loading="lazy">
         </picture>
 	      <div class="card__caption">Suve muusika kõlas Kohtla-Järvel, 22.07.2021 a.</div>
       </div>
@@ -764,7 +743,7 @@ Meie liidu arvestuses – neli esikohta ja üks kolmas koht 🎶</p>
     <div class="card">
       <div class="card__inner">
         <picture>
-          <img src="images/image8c.webp" alt="«Laulumaraton 1.0» Sillamäel, 15.08.2019" width="800" height="800" loading="eager">
+          <img src="images/image8c.webp" alt="«Laulumaraton 1.0» Sillamäel, 15.08.2019" width="400" height="400" loading="lazy">
         </picture>
 	      <div class="card__caption">«Laulumaraton 1.0» Sillamäel, 15.08.2019 a.</div>
       </div>
@@ -772,7 +751,7 @@ Meie liidu arvestuses – neli esikohta ja üks kolmas koht 🎶</p>
     <div class="card">
       <div class="card__inner">
         <picture>
-          <img src="images/image9c.webp" alt="Muusikavideo «Sijaem» võtted Tallinnas, 2017" width="800" height="800" loading="eager">
+          <img src="images/image9c.webp" alt="Muusikavideo «Sijaem» võtted Tallinnas, 2017" width="400" height="400" loading="lazy">
         </picture>
 	       <div class="card__caption">Muusikavideo «Sijaem» võtted Tallinnas, 2017 a.</div>
       </div>
@@ -780,7 +759,7 @@ Meie liidu arvestuses – neli esikohta ja üks kolmas koht 🎶</p>
     <div class="card">
       <div class="card__inner">
         <picture>
-          <img src="images/image10c.webp" alt="Kaader esinemisest «Kellad», Moskvas, 2017" width="800" height="800" loading="eager">
+          <img src="images/image10c.webp" alt="Kaader esinemisest «Kellad», Moskvas, 2017" width="400" height="400" loading="lazy">
         </picture>
 	      <div class="card__caption">Kaader esinemisest «Kellad», Moskvas, 2017 a.</div>
       </div>
@@ -788,7 +767,7 @@ Meie liidu arvestuses – neli esikohta ja üks kolmas koht 🎶</p>
 	  <div class="card">
       <div class="card__inner">
         <picture>
-          <img src="images/image11c.webp" alt="Intervjuu pärast esinemist «Elu rõõmustamine», Moskvas, 2017" width="800" height="800" loading="eager">
+          <img src="images/image11c.webp" alt="Intervjuu pärast esinemist «Elu rõõmustamine», Moskvas, 2017" width="400" height="400" loading="lazy">
         </picture>
 	      <div class="card__caption">Intervjuu pärast esinemist «Elu rõõmustamine», Moskvas, 2017 a.</div>
       </div>
@@ -796,7 +775,7 @@ Meie liidu arvestuses – neli esikohta ja üks kolmas koht 🎶</p>
 	  <div class="card">
       <div class="card__inner">
         <picture>
-          <img src="images/image12c.webp" alt="Külastas «Rahvusradio» koos saatejuhiga Jelena Ablaeva, 30.03.2017" width="800" height="800" loading="eager">
+          <img src="images/image12c.webp" alt="Külastas «Rahvusradio» koos saatejuhiga Jelena Ablaeva, 30.03.2017" width="400" height="400" loading="lazy">
         </picture>
 	      <div class="card__caption">Külastas «Rahvusradio» koos saatejuhiga Jelena Ablaeva, 30.03.2017 a.</div>
       </div>
@@ -804,7 +783,7 @@ Meie liidu arvestuses – neli esikohta ja üks kolmas koht 🎶</p>
 	  <div class="card">
       <div class="card__inner">
         <picture>
-          <img src="images/image13c.webp" alt="Üks eluhobidest ❤‍🔥 kaader tehtud Kohtla-Järve jäähallis, 11.04.2022" width="800" height="800" loading="eager">
+          <img src="images/image13c.webp" alt="Üks eluhobidest ❤‍🔥 kaader tehtud Kohtla-Järve jäähallis, 11.04.2022" width="400" height="400" loading="lazy">
         </picture>
 	       <div class="card__caption">Üks eluhobidest ❤‍🔥 kaader tehtud Kohtla-Järve jäähallis, 11.04.2022 a.</div>
       </div>
@@ -812,7 +791,7 @@ Meie liidu arvestuses – neli esikohta ja üks kolmas koht 🎶</p>
 	  <div class="card">
       <div class="card__inner">
         <picture>
-          <img src="images/image14c.webp" alt="Kaader esinemisest «Kellad», saatejuht Vadim Anatoljevitš Takmenjov kõrval, Moskvas, 2017" width="800" height="800" loading="eager">
+          <img src="images/image14c.webp" alt="Kaader esinemisest «Kellad», saatejuht Vadim Anatoljevitš Takmenjov kõrval, Moskvas, 2017" width="400" height="400" loading="lazy">
         </picture>
 	      <div class="card__caption">Kaader esinemisest «Kellad», saatejuht Vadim Anatoljevitš Takmenjov kõrval, Moskvas, 2017 a.</div>
       </div>
@@ -820,7 +799,7 @@ Meie liidu arvestuses – neli esikohta ja üks kolmas koht 🎶</p>
 	  <div class="card">
       <div class="card__inner">
         <picture>
-          <img src="images/image15c.webp" alt="Kaader esinemisest «Elu rõõmustamine», duett Anne Veskiga, Moskvas, 2017" width="800" height="800" loading="eager">
+          <img src="images/image15c.webp" alt="Kaader esinemisest «Elu rõõmustamine», duett Anne Veskiga, Moskvas, 2017" width="400" height="400" loading="lazy">
         </picture>
 	      <div class="card__caption">Kaader esinemisest «Elu rõõmustamine», duett Anne Veskiga, Moskvas, 2017 a.</div>
       </div>
@@ -828,7 +807,7 @@ Meie liidu arvestuses – neli esikohta ja üks kolmas koht 🎶</p>
 	  <div class="card">
       <div class="card__inner">
         <picture>
-          <img src="images/image16c.webp" alt="Ida-Virumaa kutseõppeasutus, Jõhvi, eriala «Pagari abiline», 2018" width="800" height="800" loading="eager">
+          <img src="images/image16c.webp" alt="Ida-Virumaa kutseõppeasutus, Jõhvi, eriala «Pagari abiline», 2018" width="400" height="400" loading="lazy">
         </picture>
 	      <div class="card__caption">Ida-Virumaa kutseõppeasutus, Jõhvi, eriala «Pagari abiline», 2018 a.</div>
       </div>
@@ -836,7 +815,7 @@ Meie liidu arvestuses – neli esikohta ja üks kolmas koht 🎶</p>
 	  <div class="card">
       <div class="card__inner">
         <picture>
-          <img src="images/image17c.webp" alt="Kaader esinemisest Kohtla-Järve kultuurikeskuses, Sompa, 2021" width="800" height="800" loading="eager">
+          <img src="images/image17c.webp" alt="Kaader esinemisest Kohtla-Järve kultuurikeskuses, Sompa, 2021" width="400" height="400" loading="lazy">
         </picture>
 	       <div class="card__caption">Kaader esinemisest Kohtla-Järve kultuurikeskuses, Sompa, 2021 a.</div>
       </div>
@@ -937,12 +916,13 @@ Meie liidu arvestuses – neli esikohta ja üks kolmas koht 🎶</p>
     
     <script src="scripts/video-audio_player.js" defer></script>
     <script src="scripts/loading.js" defer></script>
-     <script src="scripts/mob_version.js" defer></script>
+    <script src="scripts/mob_version.js" defer></script>
     <script src="scripts/memory_audio.js" defer></script>
 	<script src="scripts/cookie.js" defer></script>
-	<script src="scripts/slide_image.js" defer></script>
 	<script src="scripts/store.js" defer></script>
 	<script src="scripts/photo-1.js" defer></script>
+	<script src="scripts/slide_image.js" defer></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/js/all.min.js" async></script>
 	
 	</body>
 </html>
