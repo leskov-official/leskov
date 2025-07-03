@@ -57,9 +57,59 @@
   gtag('js', new Date());
   gtag('config', 'G-NYMTZ8N93D');
 </script>
+
+	 <style>
+    /* Сброс отступов у body, чтобы фон заливал весь экран */
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
+
+    /* Прелоадер: фиксированный блок на весь экран */
+    #preloader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: #007BFF; /* насыщенный синий фон */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+      transition: opacity 0.5s ease;
+    }
+
+    /* Центрированный логотип */
+    #logo {
+      font-size: 2.5rem;
+      color: white;
+      font-weight: bold;
+      font-family: Arial, sans-serif;
+      animation: pulse 1.5s infinite;
+    }
+
+    /* Простая анимация логотипа */
+    @keyframes pulse {
+      0% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.1); opacity: 0.8; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+  </style>
 	
 </head>
 <body>
+
+	 <div id="preloader">
+    <div id="logo"><img src="images/logo.webp" alt="&copy; логотип Leskov" width="60" height="60" loading="eager" style="height: 80px;" /></div>
+  </div>
+
+  <!-- ✅ Основное содержимое сайта -->
+  <div id="content" style="padding: 20px;">
+    <h1>Добро пожаловать на сайт!</h1>
+    <p>Контент загружается после исчезновения заставки.</p>
+  </div>
 
  <div id="cookie-consent-bar">
         <p>Этот веб-сайт использует Cookie для удобного пользования им. <button onclick="acceptCookies()">Принять</button> <button onclick="redirectToPrivacyPolicyRu()">Подробнее</button></p>
@@ -68,7 +118,7 @@
 	<header>
     <a href="index.html">
         <div class="logo">
-        <img src="images/logo.webp" alt="&copy; логотип Igor Leskov" width="60" height="60" loading="eager">
+        <img src="images/logo.webp" alt="&copy; логотип Leskov" width="60" height="60" loading="eager">
     </div>
     </a>
     <nav>
@@ -925,6 +975,20 @@
 	<script src="scripts/photo.js" defer></script>
 	<script src="scripts/slide_image.js" defer></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/js/all.min.js" async></script>
+
+	 <script>
+    window.addEventListener('load', function () {
+      const preloader = document.getElementById('preloader');
+      preloader.style.opacity = '0';
+
+      // Подождем 500 мс, чтобы завершился переход opacity
+      setTimeout(() => {
+        if (preloader && preloader.parentNode) {
+          preloader.parentNode.removeChild(preloader);
+        }
+      }, 500);
+    });
+  </script>
 
 </body>
   </html>
