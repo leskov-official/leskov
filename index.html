@@ -1002,7 +1002,7 @@
 	const dots = document.getElementById('dots');
   let dotCount = 0;
   const dotInterval = setInterval(() => {
-    dotCount = (dotCount + 1) % 4; // 0 → 1 → 2 → 3 → 0
+    dotCount = (dotCount + 1) % 4; 
     if (dots) dots.textContent = '.'.repeat(dotCount);
   }, 400);
 
