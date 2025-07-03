@@ -50,6 +50,67 @@
     <link rel="stylesheet" href="styles/photo-1.css">
   </noscript>
 
+	<style>
+	body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #00326a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  transition: opacity 0.5s ease;
+  pointer-events: none;
+}
+
+#preloader-content {
+  text-align: center;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+#description {
+  margin-top: 15px;
+  font-size: 1.1rem;
+  opacity: 0.9;
+  animation: fadeIn 1s ease-in-out;
+  font-family: Arial, sans-serif;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 0.9; transform: translateY(0); }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.1); opacity: 0.8; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+#logo img {
+  animation: pulse 1.5s infinite;
+}
+
+#dots-container {
+  display: inline-block;
+  width: 1.5em; 
+}
+
+#dots {
+  display: inline-block;
+}
+</style>
+
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-NYMTZ8N93D"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -60,6 +121,17 @@
 	
 	</head>
 <body>
+
+	<div id="preloader">
+  <div id="preloader-content">
+    <div id="logo">
+      <img src="images/logo.webp" alt="&copy; логотип Leskov" loading="eager" style="height: 80px;" />
+    </div>
+    <div id="description">
+      Загрузка сайта, пожалуйста подождите<span id="dots-container"><span id="dots"></span></span>
+    </div>
+  </div>
+</div>
 
     <div id="cookie-consent-bar">
         <p>See veebisait kasutab Cookie teie kasutuskogemuse parandamiseks. <button onclick="acceptCookies()">OK</button> <button onclick="redirectToPrivacyPolicyEt()">Rohkem teada saama</button></p>
@@ -917,6 +989,26 @@ Meie liidu arvestuses – neli esikohta ja üks kolmas koht 🎶</p>
 	<script src="scripts/photo-1.js" defer></script>
 	<script src="scripts/slide_image.js" defer></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/js/all.min.js" async></script>
+
+	<script>
+	const dots = document.getElementById('dots');
+  let dotCount = 0;
+  const dotInterval = setInterval(() => {
+    dotCount = (dotCount + 1) % 4; // 0 → 1 → 2 → 3 → 0
+    if (dots) dots.textContent = '.'.repeat(dotCount);
+  }, 400);
+
+  window.addEventListener('load', function () {
+    const preloader = document.getElementById('preloader');
+    if (preloader) {
+      preloader.style.opacity = '0';
+      setTimeout(() => {
+        preloader.style.display = 'none'; 
+        clearInterval(dotInterval); 
+      }, 500);
+    }
+  });
+	</script>
 	
 	</body>
 </html>
