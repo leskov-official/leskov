@@ -999,25 +999,23 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/js/all.min.js" async></script>
 
 <script>
-  if (window.innerWidth >= 1024) { // например, >= 1024px для десктопа
-    const dots = document.getElementById('dots');
-    let dotCount = 0;
-    const dotInterval = setInterval(() => {
-      dotCount = (dotCount + 1) % 4; 
-      if (dots) dots.textContent = '.'.repeat(dotCount);
-    }, 400);
+const dots = document.getElementById('dots');
+let dotCount = 0;
+const dotInterval = setInterval(() => {
+dotCount = (dotCount + 1) % 4;
+if (dots) dots.textContent = '.'.repeat(dotCount);
+}, 400);
 
-    window.addEventListener('load', function () {
-      const preloader = document.getElementById('preloader');
-      if (preloader) {
-        preloader.style.opacity = '0';
-        setTimeout(() => {
-          preloader.style.display = 'none'; 
-          clearInterval(dotInterval); 
-        }, 500);
-      }
-    });
-  }
+window.addEventListener('load', function () {
+const preloader = document.getElementById('preloader');
+if (preloader) {
+preloader.style.opacity = '0';
+setTimeout(() => {
+preloader.style.display = 'none';
+clearInterval(dotInterval);
+}, 500);
+}
+});
 </script>
 	
 </body>
