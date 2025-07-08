@@ -13,7 +13,7 @@
       "type": "image/webp"
     }
   ],
-  "start_url": "https://leskov.online/mob.html",
+  "start_url": "https://leskov.online/",
   "display": "standalone",
   "theme_color": "#00326a",
   "background_color": "#00326a"
