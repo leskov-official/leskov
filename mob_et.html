@@ -81,6 +81,14 @@
     @import url('styles/mob_store.css') all; 
     </style>
 
+ <style>
+@media (max-width: 1023px) {
+  #preloader {
+    display: none !important;
+  }
+}
+    </style>
+
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-NYMTZ8N93D"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -976,6 +984,15 @@ Meie liidu arvestuses – neli esikohta ja üks kolmas koht 🎶</p>
     "contentUrl": "https://leskov.online/video/video5.mp4"
   }
 ]
+</script>
+
+<script>
+  if (window.innerWidth < 1024) { 
+    const preloader = document.getElementById('preloader');
+    if (preloader) {
+      preloader.style.display = 'none';
+    }
+  }
 </script>
 	
    <script src="scripts/loading.js" defer></script>
