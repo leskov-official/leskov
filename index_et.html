@@ -10,6 +10,14 @@
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
 
+	<script>
+document.addEventListener("DOMContentLoaded", function () {
+  if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+    window.location.href = "mob.html";
+  }
+});
+</script>
+
   <link rel="icon" href="images/dark-favicon.png" type="image/x-icon">
   <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.webp">
   <link rel="manifest" href="/manifest.json">
@@ -50,14 +58,6 @@
     <link rel="stylesheet" href="styles/store.css">
     <link rel="stylesheet" href="styles/photo-1.css">
   </noscript>
-
-	<script>
-document.addEventListener("DOMContentLoaded", function () {
-  if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-    window.location.href = "mob.html";
-  }
-});
-</script>
 
 	<style>
 	body, html {
