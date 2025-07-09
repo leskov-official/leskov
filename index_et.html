@@ -52,92 +52,70 @@
   </noscript>
 
 	<style>
-  body, html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-  }
+	body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
 
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #00326a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  transition: opacity 0.5s ease;
+  pointer-events: none;
+}
+
+#preloader-content {
+  text-align: center;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+#description {
+  margin-top: 15px;
+  font-size: 1.1rem;
+  opacity: 0.9;
+  animation: fadeIn 1s ease-in-out;
+  font-family: Arial, sans-serif;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 0.9; transform: translateY(0); }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.1); opacity: 0.8; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+#logo img {
+  animation: pulse 1.5s infinite;
+}
+
+#dots-container {
+  display: inline-block;
+  width: 1.5em; 
+}
+
+#dots {
+  display: inline-block;
+}
+
+@media (max-width: 1023px) {
   #preloader {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: #00326a;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
-    transition: opacity 0.5s ease;
-    pointer-events: none;
-    padding: 20px;
-    box-sizing: border-box;
+    display: none !important;
   }
-
-  #preloader-content {
-    text-align: center;
-    color: white;
-    font-family: Arial, sans-serif;
-  }
-
-  #description {
-    margin-top: 15px;
-    font-size: 1.1rem;
-    opacity: 0.9;
-    animation: fadeIn 1s ease-in-out;
-    font-family: Arial, sans-serif;
-  }
-
-  @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 0.9; transform: translateY(0); }
-  }
-
-  @keyframes pulse {
-    0% { transform: scale(1); opacity: 1; }
-    50% { transform: scale(1.1); opacity: 0.8; }
-    100% { transform: scale(1); opacity: 1; }
-  }
-
-  #logo img {
-    animation: pulse 1.5s infinite;
-    max-width: 100%;
-    height: auto;
-  }
-
-  #dots-container {
-    display: inline-block;
-    width: 1.5em;
-  }
-
-  #dots {
-    display: inline-block;
-  }
-
-  @media (max-width: 768px) {
-    #description {
-      font-size: 1rem;
-    }
-
-    #preloader-content {
-      font-size: 0.95rem;
-    }
-
-    #preloader {
-      padding: 10px;
-    }
-  }
-
-  @media (max-width: 480px) {
-    #description {
-      font-size: 0.9rem;
-    }
-
-    #preloader-content {
-      font-size: 0.85rem;
-    }
-  }
+}
 </style>
 
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-NYMTZ8N93D"></script>
@@ -936,7 +914,7 @@ Meie liidu arvestuses – neli esikohta ja üks kolmas koht 🎶</p>
   {
     "@context": "http://schema.org",
     "@type": "VideoObject",
-    "name": "Igor Leskov, 18-aastane, Kohtla-Nõmme küla, Eesti. «Kellad»",
+    "name": "Igor Leskov, 18-aastane, Kohtla-Nõmme, Eesti. «Kellad»",
     "description": "Igor Leskov esitab laulu «Kellad».",
     "thumbnailUrl": "https://leskov.online/images/TS!.webp",
     "uploadDate": "2024-04-21T00:00:00+00:00",
@@ -954,9 +932,9 @@ Meie liidu arvestuses – neli esikohta ja üks kolmas koht 🎶</p>
   {
     "@context": "http://schema.org",
     "@type": "VideoObject",
-    "name": "Igor Leskov, 18-aastane, Kohtla-Nõmme küla, Eesti. «Detektiiv»",
+    "name": "Igor Leskov, 18-aastane, Kohtla-Nõmme, Eesti. «Detektiiv»",
     "description": "Igor Leskov esitab laulu «Detektiiv».",
-    "thumbnailUrl": "https:///leskov.online/images/TS!1.webp",
+    "thumbnailUrl": "https://leskov.online/images/TS!1.webp",
     "uploadDate": "2024-04-21T00:00:00+00:00",
     "duration": "PT2M",
     "publisher": {
@@ -969,11 +947,11 @@ Meie liidu arvestuses – neli esikohta ja üks kolmas koht 🎶</p>
     },
     "contentUrl": "https://leskov.online/video/video4.mp4"
   },
-   {
+  {
     "@context": "http://schema.org",
     "@type": "VideoObject",
-    "name": "Katte",
-    "description": "Sõbrad, kas teie arvates on meil väärt koos laulu salvestamist?",
+    "name": "Kaver",
+    "description": "Sõbrad, kuidas te arvate — kas me peaksime salvestama ühise loo?",
     "thumbnailUrl": "https://leskov.online/images/O.webp",
     "uploadDate": "2024-04-25T00:00:00+00:00",
     "duration": "PT2M",
@@ -990,8 +968,8 @@ Meie liidu arvestuses – neli esikohta ja üks kolmas koht 🎶</p>
   {
     "@context": "http://schema.org",
     "@type": "VideoObject",
-    "name": "Igor Leskov ja Anna Veski. «Radovatsja zhizni»",
-    "description": "Igor Leskov ja Anne Veski duett laulus «Radovatsja zhizni».",
+    "name": "Igor Leskov ja Anne Veski. «Elust rõõmu tundma»",
+    "description": "Igor Leskovi ja Anne Veski duett laulus «Elust rõõmu tundma».",
     "thumbnailUrl": "https://leskov.online/images/TS!2.webp",
     "uploadDate": "2024-04-21T00:00:00+00:00",
     "duration": "PT3M",
