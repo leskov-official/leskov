@@ -51,6 +51,14 @@
     <link rel="stylesheet" href="styles/photo.css">
   </noscript>
 
+	<script>
+document.addEventListener("DOMContentLoaded", function () {
+  if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+    window.location.href = "mob.html";
+  }
+});
+</script>
+
 	<style>
 	body, html {
   margin: 0;
@@ -996,7 +1004,6 @@
 
      <script src="scripts/video-audio_player.js" defer></script>
     <script src="scripts/loading.js" defer></script>
-    <script src="scripts/mob_version.js" defer></script>
     <script src="scripts/memory_audio.js" defer></script>
 	<script src="scripts/cookie.js" defer></script>
 	<script src="scripts/store.js" defer></script>
