@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Leskov - Русский - Мобильная версия</title>
   
-  <!-- SEO и соцсети -->
   <meta name="description" content="Официальный сайт Leskov. Последние новости, музыка, видео, биография и галерея.">
   <meta name="keywords" content="Igor Leskov, певец, музыка, новости, видео, биография, галерея">
   <meta property="og:image" content="images/ICON.png">
@@ -13,22 +12,18 @@
   <meta property="og:image:height" content="630">
   <link rel="canonical" href="https://leskov.online/mob.html">
 
-  <!-- Иконки -->
   <link rel="icon" href="images/dark-favicon.png" type="image/x-icon">
   <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.webp">
   <link rel="manifest" href="/manifest.json">
   <link rel="sitemap" type="application/xml" href="sitemap.xml">
 
-  <!-- Прелоад изображений -->
   <link rel="preload" href="images/O.webp" as="image">
   <link rel="preload" href="images/TS!.webp" as="image">
   <link rel="preload" href="images/TS!1.webp" as="image">
   <link rel="preload" href="images/TS!2.webp" as="image">
 
-  <!-- Иконки FontAwesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
-  <!-- Основные стили (mobile-first) -->
   <link rel="stylesheet" href="styles/mob_header_footer.css">
   <link rel="stylesheet" href="styles/mob_section.css">
   <link rel="stylesheet" href="styles/mob_artist_info.css">
@@ -354,6 +349,27 @@
   <div class="music-container">
 	  <div class="music-item">
       <div class="music-cover-1" style="position: relative; display: inline-block;">
+         <img src="images/na-vdohe-remix.webp" alt="Igor Leskov - На вдохе (Remix)" loading="eager">
+        <a href="audio/Igor Leskov - На вдохе (Remix).mp3" download class="download-button"
+           style="position: absolute; bottom: 10px; right: 10px; background-color: rgba(0,0,0,0.7); color: white; padding: 6px 12px; border-radius: 4px; text-decoration: none; font-size: 14px;">
+          Скачать
+        </a>
+        <button class="play-button" data-src="audio/Навдохе1.mp3" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); border: none; background: none;">
+          <img src="images/play-icon.webp" alt="Плей" class="play-icon" width="50" height="50" loading="eager">
+          <img src="images/pause-icon.webp" alt="Пауза" class="pause-icon" width="50" height="50" style="display: none;" loading="eager">
+        </button>
+        <input type="range" class="seek-bar" value="0" min="0" step="0.1" aria-label="Ползунок для перемотки аудиозаписи" style="width: 100%; margin-top: 10px;">
+        <audio src="audio/Навдохе1.mp3" preload="metadata"></audio>
+      </div>
+      <div class="music-info">
+        <p class="music-title">На вдохе (Remix)</p>
+        <div class="window">
+          <h3>ПОСЛЕДНИЙ РЕЛИЗ</h3>
+        </div>
+      </div>
+	</div>
+	  <div class="music-item">
+      <div class="music-cover" style="position: relative; display: inline-block;">
          <img src="images/Неидеал.webp" alt="Igor Leskov - Неидеал" loading="eager">
         <a href="audio/Igor Leskov - Неидеал.mp3" download class="download-button"
            style="position: absolute; bottom: 10px; right: 10px; background-color: rgba(0,0,0,0.7); color: white; padding: 6px 12px; border-radius: 4px; text-decoration: none; font-size: 14px;">
@@ -368,13 +384,10 @@
       </div>
       <div class="music-info">
         <p class="music-title">Неидеал</p>
-        <div class="window">
-          <h3>ПОСЛЕДНИЙ РЕЛИЗ</h3>
-        </div>
       </div>
-	</div>
+    </div>
    <div class="music-item">
-      <div class="music-cover-1" style="position: relative; display: inline-block;">
+      <div class="music-cover" style="position: relative; display: inline-block;">
          <img src="images/Просто рядом.webp" alt="Igor Leskov - Просто рядом" loading="eager">
         <a href="audio/Igor Leskov - Просто рядом.mp3" download class="download-button"
            style="position: absolute; bottom: 10px; right: 10px; background-color: rgba(0,0,0,0.7); color: white; padding: 6px 12px; border-radius: 4px; text-decoration: none; font-size: 14px;">
