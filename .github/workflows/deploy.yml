@@ -1,9 +1,8 @@
-name: Deploy to GitHub Pages
+name: GitHub Pages
 
 on:
   push:
-    branches:
-      - main  
+    branches: [main]
 
 permissions:
   contents: read
@@ -12,10 +11,13 @@ permissions:
 
 concurrency:
   group: "pages"
-  cancel-in-progress: true  
+  cancel-in-progress: true
 
 jobs:
-  build:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -27,15 +29,8 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
         with:
-          path: ./
+          path: ./public # или ./build или ./ — укажи путь к папке с index.html
 
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
