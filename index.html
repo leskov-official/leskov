@@ -366,6 +366,21 @@ document.addEventListener("DOMContentLoaded", function () {
     </div>
 	   <div class="music-item">
       <div class="music-cover-2" style="position: relative; display: inline-block;">
+        <img src="images/Не забыл.webp" alt="Igor Leskov - Не забыл" width="200" height="200" loading="eager" style="aspect-ratio: 1 / 1;">
+<a href="audio/Igor Leskov - Не забыл.mp3" download class="download-button"
+           style="position: absolute; bottom: 10px; right: 10px; background-color: rgba(0,0,0,0.7); color: white; padding: 6px 12px; border-radius: 4px; text-decoration: none; font-size: 14px;">
+          ⬇
+        </a>
+<audio src="audio/Не забыл.mp3" preload="metadata"></audio>
+        <input type="range" class="seek-bar" value="0" min="0" step="0.1" aria-label="Ползунок для перемотки аудиозаписи">
+        <button class="play-button" data-src="audio/Не забыл.mp3">&#9658;</button>
+      </div>
+      <div class="music-info">
+        <label>Не забыл</label>
+      </div>
+    </div>
+	   <div class="music-item">
+      <div class="music-cover-2" style="position: relative; display: inline-block;">
         <img src="images/Ты пойми.webp" alt="Igor Leskov - Ты пойми" width="200" height="200" loading="eager" style="aspect-ratio: 1 / 1;">
 <a href="audio/Igor Leskov - Ты пойми.mp3" download class="download-button"
            style="position: absolute; bottom: 10px; right: 10px; background-color: rgba(0,0,0,0.7); color: white; padding: 6px 12px; border-radius: 4px; text-decoration: none; font-size: 14px;">
@@ -1181,6 +1196,7 @@ clearInterval(dotInterval);
 	
 </body>
   </html>
+
 
 
 
