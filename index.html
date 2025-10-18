@@ -365,6 +365,36 @@ document.addEventListener("DOMContentLoaded", function () {
       </div>
     </div>
 	  <div class="music-item">
+      <div class="music-cover" style="position: relative; display: inline-block;">
+        <img src="images/Пьяного откровения.webp" alt="Igor Leskov - Пьяного откровения" width="200" height="200" loading="eager" style="aspect-ratio: 1 / 1;">
+<a href="audio/Igor Leskov - Пьяного откровения.mp3" download class="download-button"
+           style="position: absolute; bottom: 10px; right: 10px; background-color: rgba(0,0,0,0.7); color: white; padding: 6px 12px; border-radius: 4px; text-decoration: none; font-size: 14px;">
+          ⬇
+        </a>
+<audio src="audio/Пьяного откровения.mp3" preload="metadata"></audio>
+        <input type="range" class="seek-bar" value="0" min="0" step="0.1" aria-label="Ползунок для перемотки аудиозаписи">
+        <button class="play-button" data-src="audio/Просто рядом.mp3">&#9658;</button>
+      </div>
+      <div class="music-info">
+        <label>Пьяного откровения</label>
+      </div>
+    </div>
+	<div class="music-item">
+      <div class="music-cover">
+        <img src="images/Повторил.webp" alt="Igor Leskov - Повторил" width="200" height="200" loading="eager" style="aspect-ratio: 1 / 1;">
+	      <a href="audio/Igor Leskov - Повторил.mp3" download class="download-button"
+           style="position: absolute; bottom: 10px; right: 10px; background-color: rgba(0,0,0,0.7); color: white; padding: 6px 12px; border-radius: 4px; text-decoration: none; font-size: 14px;">
+          ⬇
+        </a>
+	      <audio src="audio/Повторил.mp3" preload="metadata"></audio>
+        <input type="range" class="seek-bar" value="0" min="0" step="0.1" aria-label="Ползунок для перемотки аудиозаписи">
+        <button class="play-button" data-src="audio/Повторил.mp3">&#9658;</button>
+      </div>
+      <div class="music-info">
+    <label for="music-title">Повторил</label>
+   </div>
+   </div>
+	  <div class="music-item">
       <div class="music-cover">
         <img src="images/Неидеал.webp" alt="Igor Leskov - Неидеал" width="200" height="200" loading="eager" style="aspect-ratio: 1 / 1;">
 	      <a href="audio/Igor Leskov - Неидеал.mp3" download class="download-button"
@@ -1062,6 +1092,7 @@ clearInterval(dotInterval);
 	
 </body>
   </html>
+
 
 
 
