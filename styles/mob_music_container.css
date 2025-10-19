@@ -59,7 +59,7 @@
     height: 100%;
     border-radius: 8px;
 	box-sizing: border-box;
-    border: 5px solid #ffd700; 
+    border: 3px solid #ffd700; 
 }
 
 .music-cover-2 img {
@@ -67,7 +67,7 @@
     height: 100%;
     border-radius: 8px;
     box-sizing: border-box;
-    border: 5px solid #ffd700; 
+    border: 3px solid #ffd700; 
 }
 
 .music-cover-2 img {
@@ -198,4 +198,5 @@
   transform: translateY(px) !important;
   color: #ffffff !important;
 }
+
 
