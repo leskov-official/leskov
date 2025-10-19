@@ -62,7 +62,9 @@
         .music-cover-1 img {
            width: 100%;
            height: auto;
-           border-radius: 10px; 
+           border-radius: 10px;
+		   box-sizing: border-box;
+           border: 5px solid #ffd700; 
         }
 
          .music-cover-2 img {
@@ -201,4 +203,5 @@
   box-shadow: 0 -2px 15px rgb(246 246 246) !important;
 	color: #ffffff  !important;
 }
+
 
