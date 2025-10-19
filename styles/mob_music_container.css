@@ -16,10 +16,10 @@
 }
 
 .window {
-    background-color: #00336a;
+    background-color: #ffd700;
     border-radius: 10px 10px 0 0;
     padding: 0;
-    color: #ffff;
+    color: #000000;
     box-shadow: 0 0 10px rgba(0,0,0,.1);
     position: relative;
     top: -236px
@@ -57,7 +57,9 @@
  .music-cover-1 img {
     width: 100%;
     height: 100%;
-    border-radius: 8px; 
+    border-radius: 8px;
+	box-sizing: border-box;
+    border: 5px solid #ffd700; 
 }
 
 .music-cover-2 img {
@@ -196,3 +198,4 @@
   transform: translateY(px) !important;
   color: #ffffff !important;
 }
+
