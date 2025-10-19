@@ -29,8 +29,8 @@
         }
 
         .window {
-            background-color: #00336a;
-	    color: #ffffff;
+            background-color: #ffd700;
+	    color: #000000;
             border-radius: 10px 10px 0 0;
             padding: 0;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -66,3 +66,4 @@
             top: 2px;         
             position: relative;        
         }
+
