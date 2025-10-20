@@ -1200,25 +1200,24 @@ clearInterval(dotInterval);
   const container = document.querySelector('.svg-notes-background');
 
   const svgNotes = [
-    'svg/note1.svg',
-    'svg/note2.svg'
-  ];
+  'svg/note1.svg',
+  'svg/note2.svg',
+  'svg/note3.svg'
+];
 
   function createSVGNote() {
     const note = document.createElement('img');
     note.src = svgNotes[Math.floor(Math.random() * svgNotes.length)];
     note.classList.add('svg-note');
 
-    // Случайные параметры
-    const startX = Math.random() * 100; // % from left
-    const startY = Math.random() * 100; // % from top
-    const xMove = (Math.random() - 0.5) * 200; // движение по X в px
-    const yMove = (Math.random() - 0.5) * 200; // движение по Y в px
-    const scale = Math.random() * 0.5 + 0.5; // масштаб: 0.5 - 1
+    const startX = Math.random() * 100; 
+    const startY = Math.random() * 100; 
+    const xMove = (Math.random() - 0.5) * 200; 
+    const yMove = (Math.random() - 0.5) * 200; 
+    const scale = Math.random() * 0.5 + 0.5; 
 
-    const duration = Math.random() * 10 + 10; // от 10s до 20s
+    const duration = Math.random() * 10 + 10; 
 
-    // Устанавливаем стиль
     note.style.left = startX + '%';
     note.style.top = startY + '%';
     note.style.setProperty('--x-move', `${xMove}px`);
@@ -1228,18 +1227,17 @@ clearInterval(dotInterval);
 
     container.appendChild(note);
 
-    // Удаляем после завершения анимации
     setTimeout(() => {
       note.remove();
     }, duration * 1000);
   }
 
-  // Появление нот каждые 300мс
   setInterval(createSVGNote, 300);
 </script>
 	
 </body>
   </html>
+
 
 
 
