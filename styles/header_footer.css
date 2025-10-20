@@ -57,6 +57,22 @@ body {
     }
 }
 
+@keyframes waveColorScale {
+  0%, 100% {
+    filter: hue-rotate(0deg);
+  }
+  50% {
+    filter: hue-rotate(90deg);
+  }
+}
+
+.logo {
+  width: 120px; 
+  height: auto;
+  animation: waveColorScale 4s ease-in-out infinite;
+  transition: all 0.3s ease;
+}
+
 header {
     background-color: #00326a;
     text-align: center;
