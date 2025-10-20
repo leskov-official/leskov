@@ -1270,43 +1270,47 @@ clearInterval(dotInterval);
 
 	<script>
   const container = document.querySelector('.svg-notes-background');
+const svgNotes = ['svg/note1.svg'];
 
-  const svgNotes = [
-  'svg/note1.svg'
-];
+const isMobile = window.innerWidth <= 768;
+const interval = isMobile ? 1500 : 500;
+const maxNotes = isMobile ? 5 : 15;
 
-  function createSVGNote() {
-    const note = document.createElement('img');
-    note.src = svgNotes[Math.floor(Math.random() * svgNotes.length)];
-    note.classList.add('svg-note');
+function createSVGNote() {
+  if (container.querySelectorAll('.svg-note').length >= maxNotes) return;
 
-    const startX = Math.random() * 100; 
-    const startY = Math.random() * 100; 
-    const xMove = (Math.random() - 0.5) * 200; 
-    const yMove = (Math.random() - 0.5) * 200; 
-    const scale = Math.random() * 0.5 + 0.5; 
+  const note = document.createElement('img');
+  note.src = svgNotes[Math.floor(Math.random() * svgNotes.length)];
+  note.classList.add('svg-note');
 
-    const duration = Math.random() * 10 + 10; 
+  const startX = Math.random() * 100;
+  const startY = Math.random() * 100;
+  const xMove = (Math.random() - 0.5) * 100;
+  const yMove = (Math.random() - 0.5) * 100;
+  const scale = Math.random() * 0.5 + 0.5;
 
-    note.style.left = startX + '%';
-    note.style.top = startY + '%';
-    note.style.setProperty('--x-move', `${xMove}px`);
-    note.style.setProperty('--y-move', `${yMove}px`);
-    note.style.setProperty('--scale', scale);
-    note.style.animationDuration = duration + 's';
+  const duration = Math.random() * 5 + 5; 
 
-    container.appendChild(note);
+  note.style.left = startX + '%';
+  note.style.top = startY + '%';
+  note.style.setProperty('--x-move', `${xMove}px`);
+  note.style.setProperty('--y-move', `${yMove}px`);
+  note.style.setProperty('--scale', scale);
+  note.style.animationDuration = duration + 's';
 
-    setTimeout(() => {
-      note.remove();
-    }, duration * 1000);
-  }
+  container.appendChild(note);
 
-  setInterval(createSVGNote, 300);
+  setTimeout(() => {
+    note.remove();
+  }, duration * 1000);
+}
+
+setInterval(createSVGNote, interval);
 </script>
 	
 </body>
 </html>
+
 
 
 
