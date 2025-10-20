@@ -18,6 +18,48 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 </script>
 
+	<script>
+  const container = document.querySelector('.svg-notes-background');
+
+  const svgNotes = [
+    'svg/note1.svg',
+    'svg/note2.svg'
+  ];
+
+  function createSVGNote() {
+    const note = document.createElement('img');
+    note.src = svgNotes[Math.floor(Math.random() * svgNotes.length)];
+    note.classList.add('svg-note');
+
+    // Случайные параметры
+    const startX = Math.random() * 100; // % from left
+    const startY = Math.random() * 100; // % from top
+    const xMove = (Math.random() - 0.5) * 200; // движение по X в px
+    const yMove = (Math.random() - 0.5) * 200; // движение по Y в px
+    const scale = Math.random() * 0.5 + 0.5; // масштаб: 0.5 - 1
+
+    const duration = Math.random() * 10 + 10; // от 10s до 20s
+
+    // Устанавливаем стиль
+    note.style.left = startX + '%';
+    note.style.top = startY + '%';
+    note.style.setProperty('--x-move', `${xMove}px`);
+    note.style.setProperty('--y-move', `${yMove}px`);
+    note.style.setProperty('--scale', scale);
+    note.style.animationDuration = duration + 's';
+
+    container.appendChild(note);
+
+    // Удаляем после завершения анимации
+    setTimeout(() => {
+      note.remove();
+    }, duration * 1000);
+  }
+
+  // Появление нот каждые 300мс
+  setInterval(createSVGNote, 300);
+</script>
+
   <link rel="icon" href="images/dark-favicon.png" type="image/x-icon">
   <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.webp">
   <link rel="manifest" href="/manifest.json">
@@ -1198,6 +1240,7 @@ clearInterval(dotInterval);
 	
 </body>
   </html>
+
 
 
 
