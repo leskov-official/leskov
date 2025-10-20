@@ -137,6 +137,8 @@ document.addEventListener("DOMContentLoaded", function () {
 	</head>
 <body>
 
+	<div class="svg-notes-background"></div>
+
 	<div id="preloader">
   <div id="preloader-content">
     <div id="logo">
@@ -1185,9 +1187,48 @@ clearInterval(dotInterval);
 }
 });
 </script>
+
+	<script>
+  const container = document.querySelector('.svg-notes-background');
+
+  const svgNotes = [
+  'svg/note1.svg',
+  'svg/note2.svg'
+];
+
+  function createSVGNote() {
+    const note = document.createElement('img');
+    note.src = svgNotes[Math.floor(Math.random() * svgNotes.length)];
+    note.classList.add('svg-note');
+
+    const startX = Math.random() * 100; 
+    const startY = Math.random() * 100; 
+    const xMove = (Math.random() - 0.5) * 200; 
+    const yMove = (Math.random() - 0.5) * 200; 
+    const scale = Math.random() * 0.5 + 0.5; 
+
+    const duration = Math.random() * 10 + 10; 
+
+    note.style.left = startX + '%';
+    note.style.top = startY + '%';
+    note.style.setProperty('--x-move', `${xMove}px`);
+    note.style.setProperty('--y-move', `${yMove}px`);
+    note.style.setProperty('--scale', scale);
+    note.style.animationDuration = duration + 's';
+
+    container.appendChild(note);
+
+    setTimeout(() => {
+      note.remove();
+    }, duration * 1000);
+  }
+
+  setInterval(createSVGNote, 300);
+</script>
 	
 	</body>
 </html>
+
 
 
 
