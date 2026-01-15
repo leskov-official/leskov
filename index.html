@@ -155,6 +155,24 @@ document.addEventListener("DOMContentLoaded", function () {
     </div>
 	
 	<header>
+
+		<button id="contactBtn" style="margin:20px;">
+  Написать сообщение
+</button>
+
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+
+    <h2>Связаться со мной</h2>
+
+    <input type="text" id="subject" placeholder="Заголовок сообщения">
+    <textarea id="message" placeholder="Текст сообщения"></textarea>
+
+    <button id="sendBtn">Отправить</button>
+  </div>
+</div>
+		
     <a href="index.html">
         <div class="logo">
         <img src="images/logo.webp" alt="&copy; логотип Leskov" width="60" height="60" loading="eager">
@@ -1270,6 +1288,7 @@ setInterval(createSVGNote, interval);
 	
 </body>
   </html>
+
 
 
 
