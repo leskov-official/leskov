@@ -345,8 +345,42 @@ document.addEventListener("DOMContentLoaded", function () {
       <section id="music" class="section">
   <h2><i class="fa fa-music" style="width:24px; height:24px;"></i> Muusika</h2>
   <div class="music-container">
-	   <div class="music-item">
+	   <div class="music-container">
+	  <div class="music-item">
       <div class="music-cover-1" style="position: relative; display: inline-block;">
+        <img src="images/Завяжи мне глаза.webp" alt="Igor Leskov - Завяжи мне глаза" width="200" height="200" loading="eager" style="aspect-ratio: 1 / 1;">
+<a href="audio/Igor Leskov - Завяжи мне глаза.mp3" download class="download-button"
+           style="position: absolute; bottom: 10px; right: 10px; background-color: rgba(0,0,0,0.7); color: white; padding: 6px 12px; border-radius: 4px; text-decoration: none; font-size: 14px;">
+          ⬇
+        </a>
+<audio src="audio/Завяжи мне глаза.mp3" preload="metadata"></audio>
+        <input type="range" class="seek-bar" value="0" min="0" step="0.1" aria-label="Ползунок для перемотки аудиозаписи">
+        <button class="play-button" data-src="audio/Завяжи мне глаза.mp3">&#9658;</button>
+      </div>
+      <div class="music-info">
+        <label>Zavyazhi mne glaza</label>
+        <div class="window">
+          <p>VIIMANE RELIIS</p>
+        </div>
+      </div>
+		</div>
+	  <div class="music-item">
+      <div class="music-cover" style="position: relative; display: inline-block;">
+        <img src="images/Не шутка.webp" alt="Igor Leskov - Не шутка" width="200" height="200" loading="eager" style="aspect-ratio: 1 / 1;">
+<a href="audio/Igor Leskov - Не шутка.mp3" download class="download-button"
+           style="position: absolute; bottom: 10px; right: 10px; background-color: rgba(0,0,0,0.7); color: white; padding: 6px 12px; border-radius: 4px; text-decoration: none; font-size: 14px;">
+          ⬇
+        </a>
+<audio src="audio/Не шутка.mp3" preload="metadata"></audio>
+        <input type="range" class="seek-bar" value="0" min="0" step="0.1" aria-label="Ползунок для перемотки аудиозаписи">
+        <button class="play-button" data-src="audio/Не шутка.mp3">&#9658;</button>
+      </div>
+      <div class="music-info">
+        <label>Ne shutka</label>
+      </div>
+    </div>
+	   <div class="music-item">
+      <div class="music-cover-2" style="position: relative; display: inline-block;">
         <img src="images/One love.webp" alt="Igor Leskov - One love" width="200" height="200" loading="eager" style="aspect-ratio: 1 / 1;">
 <a href="audio/Igor Leskov - One love.mp3" download class="download-button"
            style="position: absolute; bottom: 10px; right: 10px; background-color: rgba(0,0,0,0.7); color: white; padding: 6px 12px; border-radius: 4px; text-decoration: none; font-size: 14px;">
@@ -358,11 +392,8 @@ document.addEventListener("DOMContentLoaded", function () {
       </div>
       <div class="music-info">
         <label>One love</label>
-        <div class="window">
-          <p>VIIMANE RELIIS</p>
-        </div>
       </div>
-		</div>
+    </div>
 	   <div class="music-item">
       <div class="music-cover-2" style="position: relative; display: inline-block;">
         <img src="images/Не забыл.webp" alt="Igor Leskov - Не забыл" width="200" height="200" loading="eager" style="aspect-ratio: 1 / 1;">
@@ -1230,6 +1261,7 @@ setInterval(createSVGNote, interval);
 	
 	</body>
 </html>
+
 
 
 
