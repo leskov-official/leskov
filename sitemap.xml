@@ -49,4 +49,11 @@
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
+        <url>
+    <loc>https://leskov.online/404.html</loc>
+    <lastmod>2025-07-21T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
 </urlset>
+
