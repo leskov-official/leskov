@@ -10,15 +10,19 @@
 }
 
 .video-container::-webkit-scrollbar-track {
-    background: #f1f1f1;
+    background: #c7c7c7;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
 
 .video-container::-webkit-scrollbar-thumb {
-    background: #5d5d5d;
+    background: #000000d1;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
 
 .video-container::-webkit-scrollbar-thumb:hover {
-    background: #8d8d8d;
+    background: #00336a;
 }
 
 .video-item {
@@ -86,3 +90,4 @@
 .video-container button:hover {
     background-color: rgba(0, 0, 0, 0.8);
 }
+
