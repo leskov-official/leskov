@@ -1,12 +1,19 @@
- .video-container {
-           display: flex;
-           flex-wrap: nowrap; 
-           gap: 20px; 
-           padding: 10px; 
-           overflow-x: auto; 
-           -webkit-overflow-scrolling: touch; 
-           position: relative; 
-        }
+  .video-container {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 20px;
+    padding: 10px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    position: relative;
+
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.video-container::-webkit-scrollbar {
+    display: none;
+}
 		   
         .video-item {
            flex: 0 0 calc(33.33% - 20px);
@@ -131,3 +138,4 @@
         .video-container::-webkit-scrollbar-thumb:hover {
            background: #8d8d8d;
         }
+
