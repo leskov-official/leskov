@@ -1274,11 +1274,11 @@ setInterval(createSVGNote, interval);
     const referrer = document.referrer;
     
     // 2. Если в предыдущем адресе было "index_et", переключаем текст
-    if (referrer.includes("index_et.html")) {
+    if (referrer.includes("index.html")) {
         document.querySelector('.description').innerText = "Oih! Tundub, et rütm on kadunud — lehte ei leitud.";
         document.querySelector('.button').innerText = "Pealehele";
         document.querySelector('.button').onclick = function() {
-            window.location.href = "index_et.html";
+            window.location.href = "index.html";
         };
     }
 });
@@ -1286,6 +1286,7 @@ setInterval(createSVGNote, interval);
 	
 </body>
   </html>
+
 
 
 
