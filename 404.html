@@ -6,24 +6,15 @@
     <link rel="canonical" href="https://leskov.online/404.html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>404 - Страница не найдена</title>
-    
-    <style>
-    @import url('styles/404.css') all; 
-    </style>
-    
+    <link rel="stylesheet" href="styles/404.css">
 </head>
 <body>
     <div class="container">
-        <div class="vinyl"></div>
-        <div class="tonearm"></div>
+        <img src="images/404-music.webp" alt="404 Error" class="error-image">
+        
         <h1 class="animated">404</h1>
         <p class="description">Упс! Кажется, ритм потерян — страница не найдена.</p>
         <button class="button" onclick="redirectToHome()">На главную</button>
-        <div class="notes">
-            <div class="note">🎵</div>
-            <div class="note">🎶</div>
-            <div class="note">🎵</div>
-        </div>
     </div>
     <script>
         function redirectToHome() {
