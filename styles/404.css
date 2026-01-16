@@ -30,7 +30,7 @@ body {
 h1 {
     font-size: 8rem; /* Чуть меньше для баланса с картинкой */
     margin: 0;
-    background: linear-gradient(45deg, #00326a, #004a99);
+    background: linear-gradient(45deg, #00326a, #00326a);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: 900;
@@ -58,7 +58,7 @@ h1 {
 }
 
 .button:hover {
-    background: #004a99;
+    background: #12345a;
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(0, 50, 106, 0.3);
 }
