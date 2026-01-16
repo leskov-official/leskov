@@ -18,6 +18,10 @@ body {
     z-index: 0;
 }
 
+body::-webkit-scrollbar {
+    width: 0;
+}
+
 .svg-notes-background {
     position: fixed;
     top: 0;
