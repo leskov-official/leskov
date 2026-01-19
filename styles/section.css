@@ -29,31 +29,22 @@
         }
 
         .window {
-    background-color: #ff3d02;
+
+            background-color: #ff3d02;
+
     color: #ffffff;
-    border-radius: 10px 10px 0 0;
-    padding: 0;
-    box-shadow: 0 0 15px rgba(255, 61, 2, 0.5); 
+
+            border-radius: 10px 10px 0 0;
+
+            padding: 0;
+
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
     position: relative; 
-    top: -334px;
-    animation: red-glow 2s infinite alternate;
-}
 
+            top: -334px;
 
-@keyframes red-glow {
-   @keyframes red-glow {
-    0% {
-
-        box-shadow: 0 0 0px 0px rgba(255, 61, 2, 0);
-    }
-    50% {
-
-        box-shadow: 0 0 20px 0px rgba(255, 61, 2, 0.8);
-    }
-    100% {
- 
-        box-shadow: 0 0 30px 0px rgba(255, 61, 2, 0.4);
-    }
+        }
 	
         a {
             text-decoration: none;
@@ -83,6 +74,7 @@
             top: 2px;         
             position: relative;        
         }
+
 
 
 
