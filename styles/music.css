@@ -67,24 +67,50 @@
            border: 5px solid #ffd700; 
         }
 
-         .music-cover-2 img {
+        .music-cover-2 {           
+    position: relative;            
+    width: 250px;         
+    /* Убрали overflow: hidden, чтобы свечение не обрезалось */
+    transition: transform 0.3s ease;
+    margin: 20px; /* Добавьте отступ, чтобы свечение не налезало на соседние элементы */
+}
+
+.music-cover-2 img {
     width: 100%;
     height: auto;
     border-radius: 10px;
     box-sizing: border-box;
     border: 5px solid #ffd700; 
-        }
+    display: block;
+    
+    /* Анимация теперь на самой картинке (вместе с рамкой) */
+    animation: golden-pulse 3s infinite ease-in-out;
+    transition: box-shadow 0.3s ease;
+}
 
-     .music-cover-2:hover {           
-		  opacity: 0.9;        
-	  }
+.music-cover-2:hover {           
+    transform: scale(1.05); /* Увеличиваем весь контейнер */
+}
 
-      .music-cover-2 {           
-		  position: relative;           
-		  width: 250px; 		   
-		  overflow: hidden;         
-		  transition: transform 0.3s ease;   
-	  }
+.music-cover-2:hover img {
+    opacity: 0.9;
+    animation-play-state: paused; 
+    /* Яркое свечение при наведении */
+    box-shadow: 0 0 30px 5px rgba(255, 215, 0, 0.8);
+}
+
+/* Исправленная анимация: свечение идет снаружи */
+@keyframes golden-pulse {
+    0% {
+        box-shadow: 0 0 0px 0px rgba(255, 215, 0, 0.4);
+    }
+    50% {
+        box-shadow: 0 0 10px 5px rgba(255, 215, 0, 0.7);
+    }
+    100% {
+        box-shadow: 0 0 0px 0px rgba(255, 215, 0, 0.4);
+    }
+}
 
         .play-button {
     position: absolute;
@@ -203,5 +229,6 @@
   box-shadow: 0 -2px 15px rgb(246 246 246) !important;
 	color: #ffffff  !important;
 }
+
 
 
