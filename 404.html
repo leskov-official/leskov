@@ -7,6 +7,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>404 - Страница не найдена</title>
     <link rel="stylesheet" href="styles/404.css">
+
+<script>
+    // 1. Проверяем, какой язык у пользователя в браузере
+    var userLang = navigator.language || navigator.userLanguage;
+    
+    // 2. Проверяем, какой адрес пытался открыть пользователь
+    // Если в адресе было "et", значит он был в эстонской версии
+    var currentUrl = window.location.href;
+
+    if (currentUrl.includes('_et') || userLang.startsWith('et')) {
+        // Перенаправляем на эстонскую страницу ошибки
+        window.location.href = "404_et.html";
+    } else {
+        // Остаемся здесь (на русской версии) или просто ничего не делаем
+        // так как это и есть 404.html
+    }
+</script>
+    
 </head>
 <body>
     <div class="container">
