@@ -19,7 +19,7 @@
     background-color: #ff3d02;
     border-radius: 10px 10px 0 0;
     padding: 0;
-    color: #000000;
+    color: #ffffff;
     box-shadow: 0 0 10px rgba(0,0,0,.1);
     position: relative;
     top: -236px
@@ -198,6 +198,7 @@
   transform: translateY(px) !important;
   color: #ffffff !important;
 }
+
 
 
 
