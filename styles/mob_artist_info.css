@@ -26,9 +26,19 @@
 .artist-image img {
   max-width: 100%;
   border-radius: 10px;
-  border: 5px solid #ffd700;
+  border: 5px solid #ffd700;; 
   margin-top: 30px;
   overflow: hidden;
+  animation: red-glow-artist 2s ease-in-out infinite alternate;
+}
+
+@keyframes red-glow-artist {
+  from {
+    box-shadow: 0 0 5px 0px rgba(255, 215, 0, 0.5);
+    }
+    to {
+        box-shadow: 0 0 10px 3px rgba(255, 215, 0, 0.8);
+    }
 }
 
 .label-1, .label-2, .label-3 {
@@ -69,3 +79,4 @@
   0% { background-position: 0% 50%; }
   100% { background-position: 200% 50%; }
 }
+
