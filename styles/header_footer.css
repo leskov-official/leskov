@@ -84,6 +84,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    border-radius: 0 0 50px 50px;
 }
 
 header img {
@@ -162,6 +163,7 @@ footer {
     justify-content: space-between;
     min-height: 60px;
     font-size: 15px;
+    border-radius: 50px 50px 0px 0px;
 }
 
 .footer-content {
