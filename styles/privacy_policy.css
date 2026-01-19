@@ -14,6 +14,7 @@ body {
             display: flex;
             align-items: center;
             justify-content: space-between;
+			border-radius: 0 0 50px 50px;
         }
 
         header img {
@@ -81,6 +82,7 @@ body {
     position: fixed;
     bottom: 0;
     left: 0;
+	border-radius: 50px 50px 0px 0px;
 }
 
 .footer-link {
@@ -169,4 +171,5 @@ body {
             text-decoration: none; 
         }
 		
+
 
