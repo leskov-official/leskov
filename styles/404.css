@@ -19,7 +19,6 @@ body {
     max-width: 500px;
 }
 
-/* Стили для изображения */
 .error-image {
     width: 250px;
     height: auto;
@@ -28,7 +27,7 @@ body {
 }
 
 h1 {
-    font-size: 8rem; /* Чуть меньше для баланса с картинкой */
+    font-size: 8rem; 
     margin: 0;
     background: linear-gradient(45deg, #00326a, #00326a);
     -webkit-background-clip: text;
@@ -63,7 +62,6 @@ h1 {
     box-shadow: 0 5px 15px rgba(0, 50, 106, 0.3);
 }
 
-/* Адаптация для мобильных */
 @media (max-width: 480px) {
     h1 {
         font-size: 5rem;
@@ -78,7 +76,6 @@ h1 {
     }
 }
 
-/* Анимации */
 .animated {
     animation: pulse 2s infinite ease-in-out;
 }
