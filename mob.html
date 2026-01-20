@@ -390,6 +390,24 @@
     </div>
 	  <div class="music-item">
       <div class="music-cover-2" style="position: relative; display: inline-block;">
+         <img src="images/Набираю.webp" alt="Igor Leskov - Набираю 2" loading="eager">
+        <a href="audio/Igor Leskov - Набираю 2.mp3" download class="download-button"
+           style="position: absolute; bottom: 10px; right: 10px; background-color: rgba(0,0,0,0.7); color: white; padding: 6px 12px; border-radius: 4px; text-decoration: none; font-size: 14px;">
+          Скачать
+        </a>
+        <button class="play-button" data-src="audio/One love.mp3" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); border: none; background: none;">
+          <img src="images/play-icon.webp" alt="Плей" class="play-icon" width="50" height="50" loading="eager">
+          <img src="images/pause-icon.webp" alt="Пауза" class="pause-icon" width="50" height="50" style="display: none;" loading="eager">
+        </button>
+        <input type="range" class="seek-bar" value="0" min="0" step="0.1" aria-label="Ползунок для перемотки аудиозаписи" style="width: 100%; margin-top: 10px;">
+        <audio src="audio/Набираю 2.mp3" preload="metadata"></audio>
+      </div>
+      <div class="music-info">
+        <p class="music-title">Набираю 2</p>
+      </div>
+    </div>
+	  <div class="music-item">
+      <div class="music-cover-2" style="position: relative; display: inline-block;">
          <img src="images/One love.webp" alt="Igor Leskov - One love" loading="eager">
         <a href="audio/Igor Leskov - One love.mp3" download class="download-button"
            style="position: absolute; bottom: 10px; right: 10px; background-color: rgba(0,0,0,0.7); color: white; padding: 6px 12px; border-radius: 4px; text-decoration: none; font-size: 14px;">
@@ -1339,6 +1357,7 @@ setInterval(createSVGNote, interval);
 	
 </body>
 </html>
+
 
 
 
