@@ -1,6 +1,6 @@
-function updateSeekBarBackground(seekBar, value, max) {
+function updateSeekBarBackground(seekBarFill, value, max) {
   const percent = max > 0 ? (value / max) * 100 : 0;
-  seekBar.style.background = `linear-gradient(to right, #ffd700 0%, #ffd700 ${percent}%, #c7c7c7 ${percent}%, #c7c7c7 100%)`;
+  seekBarFill.style.width = `${percent}%`;
 }
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -133,6 +133,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 });
+
 
 
 
