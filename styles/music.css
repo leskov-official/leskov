@@ -121,14 +121,14 @@
   -webkit-appearance: none;
   appearance: none;
 
-  background: linear-gradient(to right, #00336a 0%, rgba(255,255,255,0.5) 0%);
+  background: linear-gradient(to right, #ffd700 0%, rgba(255,255,255,0.5) 0%);
   border-radius: 5px;
 
   outline: none;
   cursor: pointer;
   padding: 0;
   margin: 0;
-		  opacity: 0;
+  opacity: 0;
   transition: opacity 0.3s ease;
 
   z-index: 5;
@@ -172,11 +172,10 @@
 }
 
 .seek-bar::-moz-range-thumb {
-  width: 14px;
-  height: 14px;
-  background: #333;
-  border-radius: 50%;
-  cursor: pointer;
+  width: 0;
+  height: 0;
+  background: transparent;
+  border: none;
 }
 
         .playing {
