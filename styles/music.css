@@ -86,7 +86,7 @@
   appearance: none;
 
   background: linear-gradient(to right, #ffd700 0%, rgba(255,255,255,0.5) 0%);
-  border-radius: 5px;
+  border-radius: 999px;
 
   outline: none;
   cursor: pointer;
@@ -96,6 +96,14 @@
   transition: opacity 0.3s ease;
 
   z-index: 5;
+}
+
+.seekbar-fill {
+  height: 100%;
+  width: 0%;
+  background: #ffd700;
+  border-radius: 999px; /* скруглённый правый край */
+  transition: width 0.1s linear;
 }
 
 .music-cover:hover .seek-bar,
@@ -136,5 +144,6 @@
            background-color: #ffd700;
 	   color: rgb(255 255 255);
         }
+
 
 
