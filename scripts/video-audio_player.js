@@ -1,3 +1,18 @@
+const audio = document.querySelector('audio');
+const seekBar = document.querySelector('.seek-bar');
+const seekBarFill = document.querySelector('.seekbar-fill');
+
+seekBar.addEventListener('input', () => {
+  updateSeekBarBackground(seekBarFill, seekBar.value, seekBar.max);
+  audio.currentTime = seekBar.value; // синхронизация с аудио
+});
+
+// обновление во время воспроизведения
+audio.addEventListener('timeupdate', () => {
+  seekBar.value = audio.currentTime;
+  updateSeekBarBackground(seekBarFill, audio.currentTime, audio.duration);
+});
+
 function updateSeekBarBackground(seekBarFill, value, max) {
   const percent = max > 0 ? (value / max) * 100 : 0;
   seekBarFill.style.width = `${percent}%`;
@@ -133,6 +148,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 });
+
 
 
 
