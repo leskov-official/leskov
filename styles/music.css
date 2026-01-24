@@ -98,14 +98,6 @@
   z-index: 5;
 }
 
-.seekbar-fill {
-  height: 100%;
-  width: 0%;
-  background: #ffd700;
-  border-radius: 999px; /* скруглённый правый край */
-  transition: width 0.1s linear;
-}
-
 .music-cover:hover .seek-bar,
 .music-cover.playing .seek-bar {
   opacity: 1;
@@ -144,6 +136,7 @@
            background-color: #ffd700;
 	   color: rgb(255 255 255);
         }
+
 
 
 
