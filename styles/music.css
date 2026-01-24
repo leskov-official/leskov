@@ -29,18 +29,6 @@
            margin-right: 20px;
         }
 
-         .music-cover-1 {
-           position: relative;
-           width: 250px; 
-		   overflow: hidden; 
-           transition: transform 0.3s ease;
-		   
-        }
-
-        .music-cover-1:hover {
-           opacity: 0.9; 
-        }
-
         .music-cover {
            position: relative;
            width: 250px; 
@@ -58,30 +46,6 @@
            height: auto;
            border-radius: 10px; 
         }
-
-        .music-cover-1 img {
-           width: 100%;
-           height: auto;
-           border-radius: 10px;
-        }
-
-        .music-cover-2 {           
-    position: relative;
-           width: 250px; 
-		   overflow: hidden; 
-           transition: transform 0.3s ease;
-}
-
-.music-cover-2 img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-}
-
-.music-cover-2:hover img {
-    opacity: 0.9;
-    animation-play-state: paused; 
-}
 
         .play-button {
     position: absolute;
@@ -139,16 +103,6 @@
   opacity: 1;
 }
 
-.music-cover-1:hover .seek-bar,
-.music-cover-1.playing .seek-bar {
-  opacity: 1;
-}
-
-.music-cover-2:hover .seek-bar,
-.music-cover-2.playing .seek-bar {
-  opacity: 1;
-}
-
 .seek-bar::-webkit-slider-runnable-track {
   height: 6px;
   background: transparent;
@@ -182,3 +136,4 @@
            background-color: #ffd700;
 	   color: rgb(255 255 255);
         }
+
