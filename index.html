@@ -348,18 +348,12 @@ document.addEventListener("DOMContentLoaded", function () {
    <section id="music" class="section">
   <h2><i class="fa fa-music" style="width:24px; height:24px;"></i> Музыка</h2>
   <div class="music-container">
-  <div class="music-item">
-      <div class="music-cover" style="position: relative; display: inline-block;">
+   <div class="music-item">
+      <div class="music-cover-1" style="position: relative; display: inline-block;">
         <img src="images/Завяжи мне глаза.webp" alt="Igor Leskov - Завяжи мне глаза" width="200" height="200" loading="eager">
         <audio src="audio/Завяжи мне глаза.mp3" preload="metadata"></audio>
-        <div class="seekbar-container" style="position: relative; height: 6px; width: 100%; margin-top: 10px; background: #c7c7c7; border-radius: 999px; overflow: hidden;">
-      <div class="seekbar-fill" style="height: 100%; width: 0%; background: #ffd700; border-radius: 999px;"></div>
-    </div>
-
-    <!-- Сам input остаётся для управления -->
-    <input type="range" class="seek-bar" value="0" min="0" step="0.1" style="position: absolute; top: 0; left: 0; width: 100%; opacity: 0; height: 6px;">
-    
-    <button class="play-button" data-src="audio/Завяжи мне глаза.mp3">&#9658;</button>
+        <input type="range" class="seek-bar" value="0" min="0" step="0.1">
+        <button class="play-button" data-src="audio/Завяжи мне глаза.mp3">&#9658;</button>
       </div>
     </div>
   <div class="music-item">
@@ -1070,6 +1064,7 @@ setInterval(createSVGNote, interval);
 	
 </body>
   </html>
+
 
 
 
