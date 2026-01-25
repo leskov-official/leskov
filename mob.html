@@ -349,43 +349,38 @@
 <section id="music" class="section">
   <h2><i class="fa fa-music" style="width:24px; height:24px;"></i> Музыка</h2>
   <div class="music-container">
-	  <div class="music-item">
-      <div class="music-cover-1" style="position: relative; display: inline-block;">
-         <img src="images/Завяжи мне глаза.webp" alt="Igor Leskov - Завяжи мне глаза" loading="eager">
-        <a href="audio/Igor Leskov - Завяжи мне глаза.mp3" download class="download-button"
-           style="position: absolute; bottom: 10px; right: 10px; background-color: rgba(0,0,0,0.7); color: white; padding: 6px 12px; border-radius: 4px; text-decoration: none; font-size: 14px;">
-          Скачать
-        </a>
-        <button class="play-button" data-src="audio/Завяжи мне глаза.mp3" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); border: none; background: none;">
+
+    <div class="music-item">
+      <div class="music-cover" style="position: relative; display: inline-block;">
+        <img src="images/Завяжи мне глаза.webp" alt="Igor Leskov - Завяжи мне глаза" width="200" height="200" loading="eager">
+        
+        <button class="play-button" data-src="audio/Завяжи мне глаза.mp3" 
+                style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); border: none; background: none;">
           <img src="images/play-icon.webp" alt="Плей" class="play-icon" width="50" height="50" loading="eager">
           <img src="images/pause-icon.webp" alt="Пауза" class="pause-icon" width="50" height="50" style="display: none;" loading="eager">
         </button>
-        <input type="range" class="seek-bar" value="0" min="0" step="0.1" aria-label="Ползунок для перемотки аудиозаписи" style="width: 100%; margin-top: 10px;">
+
+        <input type="range" class="seek-bar" value="0" min="0" step="0.1" 
+               style="width: 100%; margin-top: 10px;" aria-label="Ползунок для перемотки аудиозаписи">
+        
         <audio src="audio/Завяжи мне глаза.mp3" preload="metadata"></audio>
       </div>
-      <div class="music-info">
-        <p class="music-title">Завяжи мне глаза</p>
-        <div class="window">
-          <h3>ПОСЛЕДНИЙ РЕЛИЗ</h3>
-        </div>
-      </div>
-	</div>
-	  <div class="music-item">
+    </div>
+
+    <div class="music-item">
       <div class="music-cover" style="position: relative; display: inline-block;">
-         <img src="images/Не шутка.webp" alt="Igor Leskov - Не шутка" loading="eager">
-        <a href="audio/Igor Leskov - Не шутка.mp3" download class="download-button"
-           style="position: absolute; bottom: 10px; right: 10px; background-color: rgba(0,0,0,0.7); color: white; padding: 6px 12px; border-radius: 4px; text-decoration: none; font-size: 14px;">
-          Скачать
-        </a>
-        <button class="play-button" data-src="audio/Не шутка.mp3" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); border: none; background: none;">
+        <img src="images/Не шутка.webp" alt="Igor Leskov - Не шутка" width="200" height="200" loading="eager">
+        
+        <button class="play-button" data-src="audio/Не шутка.mp3" 
+                style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); border: none; background: none;">
           <img src="images/play-icon.webp" alt="Плей" class="play-icon" width="50" height="50" loading="eager">
           <img src="images/pause-icon.webp" alt="Пауза" class="pause-icon" width="50" height="50" style="display: none;" loading="eager">
         </button>
-        <input type="range" class="seek-bar" value="0" min="0" step="0.1" aria-label="Ползунок для перемотки аудиозаписи" style="width: 100%; margin-top: 10px;">
+
+        <input type="range" class="seek-bar" value="0" min="0" step="0.1" 
+               style="width: 100%; margin-top: 10px;" aria-label="Ползунок для перемотки аудиозаписи">
+        
         <audio src="audio/Не шутка.mp3" preload="metadata"></audio>
-      </div>
-      <div class="music-info">
-        <p class="music-title">Не шутка</p>
       </div>
     </div>
 	  <div class="music-item">
@@ -1357,6 +1352,7 @@ setInterval(createSVGNote, interval);
 	
 </body>
 </html>
+
 
 
 
