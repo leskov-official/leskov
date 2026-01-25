@@ -26,10 +26,9 @@
 .artist-image img {
   max-width: 100%;
   border-radius: 10px;
-  border: 5px solid #ffd700;; 
+  border: 2px solid #ffd700;; 
   margin-top: 30px;
   overflow: hidden;
-  animation: red-glow-artist 2s ease-in-out infinite alternate;
 }
 
 @keyframes red-glow-artist {
@@ -43,7 +42,7 @@
 
 .label-1, .label-2, .label-3 {
   position: absolute;
-  top: 40px;               
+  top: 220px;              
   left: 50%;               
   transform: translateX(-50%); 
   background: rgb(245, 245, 245);
@@ -79,4 +78,3 @@
   0% { background-position: 0% 50%; }
   100% { background-position: 200% 50%; }
 }
-
