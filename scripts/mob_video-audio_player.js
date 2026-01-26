@@ -50,61 +50,73 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
   musicItems.forEach(function(item, index) {
-  const playButton = item.querySelector(".play-button");
-  const playIcon = playButton.querySelector(".play-icon");
-  const pauseIcon = playButton.querySelector(".pause-icon");
-  const seekBar = item.querySelector(".seek-bar");
-  const audioPlayer = item.querySelector("audio");
-  const audioSrc = audioPlayer.src;
+    const playButton = item.querySelector(".play-button");
+    const playIcon = playButton.querySelector(".play-icon");
+    const pauseIcon = playButton.querySelector(".pause-icon");
+    const seekBar = item.querySelector(".seek-bar");
+    const audioSrc = playButton.dataset.src;
+    const audioPlayer = new Audio(audioSrc);
 
-  audioPlayer.addEventListener("loadedmetadata", function() {
-    seekBar.max = audioPlayer.duration || 0;
+    audioPlayer.addEventListener("loadedmetadata", function() {
+      seekBar.max = audioPlayer.duration || 0;
 
-    const savedTime = localStorage.getItem(audioSrc);
-    if (savedTime && !isNaN(savedTime)) {
-      audioPlayer.currentTime = parseFloat(savedTime);
-      seekBar.value = parseFloat(savedTime);
-    } else {
-      seekBar.value = 0;
-    }
-
-    updateSeekBarBackground(seekBar, seekBar.value, seekBar.max);
-  });
-
-  audioPlayer.addEventListener("timeupdate", function() {
-    seekBar.value = audioPlayer.currentTime;
-    updateSeekBarBackground(seekBar, seekBar.value, seekBar.max);
-  });
-
-  playButton.addEventListener("click", function() {
-    if (currentAudioPlayer && currentAudioPlayer !== audioPlayer) {
-      currentAudioPlayer.pause();
-      if (currentPlayButton) {
-        const prevPlayIcon = currentPlayButton.querySelector(".play-icon");
-        const prevPauseIcon = currentPlayButton.querySelector(".pause-icon");
-        prevPlayIcon.style.display = 'block';
-        prevPauseIcon.style.display = 'none';
-        currentPlayButton.classList.remove("playing");
+      const savedTime = localStorage.getItem(audioSrc);
+      if (savedTime && !isNaN(savedTime)) {
+        audioPlayer.currentTime = parseFloat(savedTime);
+        seekBar.value = parseFloat(savedTime);
+      } else {
+        seekBar.value = 0;
       }
-    }
 
-    currentAudioPlayer = audioPlayer;
-    currentPlayButton = playButton;
+      updateSeekBarBackground(seekBar, seekBar.value, seekBar.max);
+    });
 
-    if (audioPlayer.paused) {
-      audioPlayer.play();
-      playIcon.style.display = 'none';
-      pauseIcon.style.display = 'block';
-      playButton.classList.add("playing");
-    } else {
-      audioPlayer.pause();
-      localStorage.setItem(audioSrc, audioPlayer.currentTime);
-      playIcon.style.display = 'block';
-      pauseIcon.style.display = 'none';
-      playButton.classList.remove("playing");
-    }
-  });
-});
+    audioPlayer.addEventListener("timeupdate", function() {
+      seekBar.value = audioPlayer.currentTime;
+      updateSeekBarBackground(seekBar, seekBar.value, seekBar.max);
+    });
+
+    seekBar.addEventListener("input", function() {
+      updateSeekBarBackground(seekBar, seekBar.value, seekBar.max);
+    });
+
+    seekBar.addEventListener("change", function() {
+      audioPlayer.currentTime = parseFloat(seekBar.value);
+      localStorage.setItem(audioSrc, seekBar.value);
+    });
+
+    playButton.addEventListener("click", function() {
+      if (currentAudioPlayer && currentAudioPlayer !== audioPlayer) {
+        currentAudioPlayer.pause();
+        if (currentPlayButton) {
+          const prevPlayIcon = currentPlayButton.querySelector(".play-icon");
+          const prevPauseIcon = currentPlayButton.querySelector(".pause-icon");
+          prevPlayIcon.style.display = 'block';
+          prevPauseIcon.style.display = 'none';
+          currentPlayButton.classList.remove("playing");
+        }
+      }
+
+      currentAudioPlayer = audioPlayer;
+      currentPlayButton = playButton;
+
+      if (audioPlayer.paused) {
+        audioPlayer.play();
+        playIcon.style.display = 'none';
+        pauseIcon.style.display = 'block';
+        playButton.classList.add("playing");
+
+        if (currentVideo && !currentVideo.paused) {
+          currentVideo.pause();
+        }
+      } else {
+        audioPlayer.pause();
+        localStorage.setItem(audioSrc, audioPlayer.currentTime);
+        playIcon.style.display = 'block';
+        pauseIcon.style.display = 'none';
+        playButton.classList.remove("playing");
+      }
+    });
 
     audioPlayer.addEventListener("ended", function() {
       playIcon.style.display = 'block';
@@ -127,5 +139,4 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 });
-
 
